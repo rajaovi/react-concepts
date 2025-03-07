@@ -1,23 +1,11 @@
-import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import "./App.css";
+import RoutePage from "./routes";
 
 function App() {
   return (
-    <>
-      <Router>
-        <Switch>
-          <Route path="/">
-            <Home />
-          </Route>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-        </Switch>
-      </Router>
-    </>
+    <div className="App">
+      <RoutePage />
+    </div>
   );
 }
 
