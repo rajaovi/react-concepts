@@ -3,13 +3,10 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Home Page</h1>
-      <nav>
+    <div className="home">
+      <h3>Click any Concepts !</h3>
+      <nav className="homeNav">
         <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
           <li>
             <Link to="/lifitingstate">Lifting State Up</Link>
           </li>

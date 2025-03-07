@@ -1,0 +1,16 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.homeNav li {
+  padding: 3px 0;
+  list-style: decimal;
+}
+.backToHome {
+  color: green;
+  display: block;
+  padding: 15px 0;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #ccc;
+}
