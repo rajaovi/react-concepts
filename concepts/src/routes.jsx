@@ -7,6 +7,7 @@ import UseMemo from "./pages/hooks/useMemo";
 import UseCallBack from "./pages/hooks/useCallback";
 import UseContext from "./pages/hooks/useContext";
 import UseTransition from "./pages/hooks/useTransition";
+import CustomHook from "./pages/hooks/customHook";
 
 const RoutePage = () => {
   return (
@@ -17,6 +18,7 @@ const RoutePage = () => {
       <Route path="/usecallback" element={<UseCallBack />} />
       <Route path="/usecontext" element={<UseContext />} />
       <Route path="/usetransition" element={<UseTransition />} />
+      <Route path="/customhook" element={<CustomHook />} />
     </Routes>
   );
 };

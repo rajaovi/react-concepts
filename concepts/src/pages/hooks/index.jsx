@@ -18,6 +18,9 @@ export const Hooks = () => {
         <li>
           <Link to="/usetransition">Use Transition</Link>
         </li>
+        <li>
+          <Link to="/customhook">Custom Hook</Link>
+        </li>
       </ul>
     </>
   );
