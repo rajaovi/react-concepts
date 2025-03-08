@@ -2,11 +2,21 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 li {
+    color: #333;
+    font-size: 14px;
     list-style: none;
 }
 a {
+    color: blue;
+    font-size: 14px;
     text-decoration: none;
 }
 h4 {
+    font-size: 15px;
     margin: 8px 0;
+}
+h5 {
+    color: #333;
+    font-size: 14px;
+    margin: 5px 0;
 }
