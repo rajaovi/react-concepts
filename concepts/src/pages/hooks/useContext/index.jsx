@@ -1,26 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import FunctionComponent from "./functionComponent";
-import ClassComponent from "./classComponent";
 import BackToHome from "../../../components/backToHome";
-
-// eslint-disable-next-line react-refresh/only-export-components
-export const ThemeContext = React.createContext()
+import ThemeProvider from "./themeContext";
 
 const UseContext = () => {
-    const [darkTheme, setDarkTheme] = useState(true);
-
-    function toggleTheme() {
-        setDarkTheme(!darkTheme);
-    }
-
   return (
     <>
       <BackToHome />
-      <ThemeContext.Provider value={darkTheme}>
-        <button onClick={toggleTheme}>Toggle Theme</button>
+      <ThemeProvider>
         <FunctionComponent />
-        <ClassComponent />
-      </ThemeContext.Provider>
+      </ThemeProvider>
     </>
   );
 };

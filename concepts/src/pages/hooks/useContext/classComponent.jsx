@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ThemeContext } from ".";
+import { ThemeProvider } from "./themeContext";
 
 export class ClassComponent extends Component {
   themeStyle(dark) {
