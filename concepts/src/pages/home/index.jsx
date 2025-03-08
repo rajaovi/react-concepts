@@ -5,7 +5,7 @@ import { Hooks } from "../hooks";
 const Home = () => {
   return (
     <div className="home">
-      <h3>Click any Concepts !</h3>
+      <h3>React concepts with Examples</h3>
       <nav className="homeNav">
         <ul>
           <li>

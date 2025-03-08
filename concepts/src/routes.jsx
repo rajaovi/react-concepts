@@ -6,6 +6,7 @@ import LiftingState from "./pages/liftingState";
 import UseMemo from "./pages/hooks/useMemo";
 import UseCallBack from "./pages/hooks/useCallback";
 import UseContext from "./pages/hooks/useContext";
+import UseTransition from "./pages/hooks/useTransition";
 
 const RoutePage = () => {
   return (
@@ -15,6 +16,7 @@ const RoutePage = () => {
       <Route path="/usememo" element={<UseMemo />} />
       <Route path="/usecallback" element={<UseCallBack />} />
       <Route path="/usecontext" element={<UseContext />} />
+      <Route path="/usetransition" element={<UseTransition />} />
     </Routes>
   );
 };

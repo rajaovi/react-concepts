@@ -15,6 +15,9 @@ export const Hooks = () => {
         <li>
           <Link to="/usecontext">Use Context</Link>
         </li>
+        <li>
+          <Link to="/usetransition">Use Transition</Link>
+        </li>
       </ul>
     </>
   );
