@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Hooks } from "../hooks";
 
 const Home = () => {
   return (
@@ -9,6 +10,9 @@ const Home = () => {
         <ul>
           <li>
             <Link to="/lifitingstate">Lifting State Up</Link>
+          </li>
+          <li>
+            <Hooks />
           </li>
         </ul>
       </nav>
