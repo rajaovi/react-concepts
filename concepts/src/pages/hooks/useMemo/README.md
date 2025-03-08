@@ -2,6 +2,7 @@
 
 useMemo cache the result of a calculation between renders. It's used to optimize performance by preventing unnecessary recalculations of expensive values.
 
+- It Optimize the performance of your React application by memoizing expensive computations. Memoization is the process of caching the results of a function call based on its input parameters.
 - The useMemo hook takes two arguments: A function that performs the calculation and An array of dependencies.
 - The hook will only recalculate the value when one of the dependencies has changed. Otherwise, it will return the cached value from the previous render.
 
