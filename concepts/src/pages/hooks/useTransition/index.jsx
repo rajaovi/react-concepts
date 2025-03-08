@@ -1,4 +1,5 @@
 import React, { useState, useTransition } from "react";
+import BackToHome from "../../../components/backToHome";
 
 const defaultList = [1, 2, 3, 4, 5, 6];
 const listSize = 10000;
@@ -22,10 +23,13 @@ const UseTransition = () => {
 
   return (
     <>
+      <BackToHome />
       <input type="text" value={name} onChange={handleChange} />
-      {isPending ? <h4>Loading</h4> :list.map((item, index) => (
-        <div key={index}>Item: {item}</div>
-      ))}
+      {isPending ? (
+        <h4>Loading</h4>
+      ) : (
+        list.map((item, index) => <div key={index}>Item: {item}</div>)
+      )}
     </>
   );
 };
