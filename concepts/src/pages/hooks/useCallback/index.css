@@ -1,9 +1,10 @@
 .product-wrap {
     display: flex;
-    justify-content: space-between;
 }
 .product {
     border: 1px solid #ccc;
     min-width: 20em;
+    margin: 15px;
+    padding: 10px;
     text-align: center;
 }
