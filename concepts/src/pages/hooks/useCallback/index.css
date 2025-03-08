@@ -1,0 +1,9 @@
+.product-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.product {
+    border: 1px solid #ccc;
+    min-width: 20em;
+    text-align: center;
+}

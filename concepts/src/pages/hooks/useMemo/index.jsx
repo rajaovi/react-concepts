@@ -23,12 +23,17 @@ export default function UseMemo() {
 
   return (
     <>
-        <BackToHome />
-        <input type='number' value={number} onChange={(e) => setNumber((parseInt(e.target.value)))} />
-        <button onClick={() => setDark(!dark)}>Toggle Theme</button>
-        <div style={themeStyle}>{numberDouble}</div>
+      <BackToHome />
+      <h4>useMemo</h4>
+      <input
+        type="number"
+        value={number}
+        onChange={(e) => setNumber(parseInt(e.target.value))}
+      />
+      <button onClick={() => setDark(!dark)}>Toggle Theme</button>
+      <div style={themeStyle}>{numberDouble}</div>
     </>
-  )
+  );
 }
 
 function loopFunc(num) { 
