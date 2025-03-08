@@ -12,6 +12,9 @@ export const Hooks = () => {
         <li>
           <Link to="/usecallback">Use Callback</Link>
         </li>
+        <li>
+          <Link to="/usecontext">Use Context</Link>
+        </li>
       </ul>
     </>
   );
