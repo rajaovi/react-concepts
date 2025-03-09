@@ -1,4 +1,6 @@
 import React, { useReducer, useEffect } from "react";
+import BackToHome from "../../../components/backToHome";
+import Title from "../../../components/title";
 
 const initialState = {
   time: 0,
@@ -39,6 +41,8 @@ const UseReducer = () => {
 
   return (
     <div>
+      <BackToHome />
+      <Title title="UseReducer" />
       <p>{state.time}s</p>
       <div>
         <button onClick={() => dispatch({ type: "start" })}>Start</button>
