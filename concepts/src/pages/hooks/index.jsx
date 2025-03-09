@@ -13,7 +13,7 @@ export const Hooks = () => {
               <Link>useState</Link>
             </li>
             <li>
-              <Link>useReducer</Link>
+              <Link to="/usereducer">useReducer</Link>
             </li>
           </ul>
         </li>

@@ -1,5 +1,6 @@
 import React, { useState, useTransition } from "react";
 import BackToHome from "../../../components/backToHome";
+import Title from "../../../components/title";
 
 const defaultList = [1, 2, 3, 4, 5, 6];
 const listSize = 10000;
@@ -14,16 +15,17 @@ const UseTransition = () => {
     setName(value);
     const data = [];
     startTransition(() => {
-        for (let i = 0; i < listSize; i++) {
-          data[i] = value;
-        }
-        setList(data);
-    })
+      for (let i = 0; i < listSize; i++) {
+        data[i] = value;
+      }
+      setList(data);
+    });
   };
 
   return (
     <>
       <BackToHome />
+      <Title title="Use Transition" />
       <input type="text" value={name} onChange={handleChange} />
       {isPending ? (
         <h4>Loading</h4>

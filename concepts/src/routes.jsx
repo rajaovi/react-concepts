@@ -8,6 +8,7 @@ import UseCallBack from "./pages/hooks/useCallback";
 import UseContext from "./pages/hooks/useContext";
 import UseTransition from "./pages/hooks/useTransition";
 import CustomHook from "./pages/hooks/customHook";
+import UseReducer from "./pages/hooks/useReducer";
 
 const RoutePage = () => {
   return (
@@ -19,6 +20,7 @@ const RoutePage = () => {
       <Route path="/usecontext" element={<UseContext />} />
       <Route path="/usetransition" element={<UseTransition />} />
       <Route path="/customhook" element={<CustomHook />} />
+      <Route path="/usereducer" element={<UseReducer />} />
     </Routes>
   );
 };

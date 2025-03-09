@@ -5,11 +5,13 @@ import ThemeProvider from "./themeContext";
 import PropDrilling from "./propDrilling";
 import AvoidPropDrilling from "./avoidPropDrilling";
 import "./index.css";
+import Title from "../../../components/title";
 
 const UseContext = () => {
   return (
     <>
       <BackToHome />
+      <Title title="Use Context" />
       <ThemeProvider>
         <FunctionComponent />
         <>
