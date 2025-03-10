@@ -4,8 +4,8 @@ Lazy Suspense is a technique for improving application performance by deferring 
 
 ### How to use it:
 
-#### Component Page:
-create a lazy component and pass the component to it [ const Lazy = lazy(() => import('./lazyTest')) ]
+#### Component where going to add Lazy:
+- create a lazy component and pass the component to it `const Lazy = lazy(() => import('./lazyTest'))`
 - And wrapy your component with `Suspense` component from `react-suspense` library.
 - `Suspense` component will render a fallback component while the lazy component is loading.
 
@@ -18,7 +18,7 @@ const Lazy = lazy(() => import('./lazyTest'));
   <Lazy />
 </Suspense>
 ```
-#### Component:
+#### Component want to deferred:
 
 ```
 export default function LazyTest() {
