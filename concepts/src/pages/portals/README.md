@@ -9,7 +9,7 @@ createPortal takes two arguments: the React children to render and the DOM node 
 
 ### How to use it:
 
-#### Portal Page
+#### Portal Page:
 Here we created a Modal component - on click of the button we are going to open the dialog
 ```
 <div>
@@ -28,7 +28,7 @@ Here we created a Modal component - on click of the button we are going to open 
   </Modal>
 </div>
 ```
-#### Main Index Page
+#### Main Index Page:
 Add a new div[modal] to the body of the index.html file
 ```
 <body>
@@ -37,7 +37,7 @@ Add a new div[modal] to the body of the index.html file
   <script type="module" src="/src/main.jsx"></script>
 </body>
 ```
-#### Modal Component
+#### Modal Component:
 In return of the Modal component we are going to use the createPortal to render the children into the modal div
 ```
 import { createPortal } from 'react-dom';
