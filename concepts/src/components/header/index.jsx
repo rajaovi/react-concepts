@@ -2,10 +2,10 @@ import React from "react";
 import BackToHome from "../backToHome";
 import Title from "../title";
 
-const Header = ({ title }) => {
+const Header = ({ title, page = "Home", toPage = "/" }) => {
   return (
     <header>
-      <BackToHome />
+      <BackToHome page={page} toPage={toPage} />
       <Title title={title} />
     </header>
   );

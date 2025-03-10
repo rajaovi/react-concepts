@@ -1,6 +1,5 @@
 import React, { useState, useTransition } from "react";
-import BackToHome from "../../../components/backToHome";
-import Title from "../../../components/title";
+import Header from "../../../components/header";
 
 const defaultList = [1, 2, 3, 4, 5, 6];
 const listSize = 10000;
@@ -24,8 +23,7 @@ const UseTransition = () => {
 
   return (
     <>
-      <BackToHome />
-      <Title title="Use Transition" />
+      <Header title="useTransition" page="Hooks" toPage="/hooks" />
       <input type="text" value={name} onChange={handleChange} />
       {isPending ? (
         <h4>Loading</h4>

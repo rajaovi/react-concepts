@@ -1,8 +1,7 @@
 import React, { useCallback, useState } from "react";
-import BackToHome from "../../../components/backToHome";
 import Product from "./product";
 import "./index.css";
-import Title from "../../../components/title";
+import Header from "../../../components/header";
 
 const UseCallBack = () => {
   console.log("useCallBack component rendered");
@@ -22,8 +21,7 @@ const UseCallBack = () => {
 
   return (
     <>
-      <BackToHome />
-      <Title title="useCallback" />
+      <Header title="useCallBack" page="Hooks" toPage="/hooks" />
       <div className="useCallBack">
         <h3>Count: {count}</h3>
         <button onClick={() => setCount(count + 1)}>Increment</button>

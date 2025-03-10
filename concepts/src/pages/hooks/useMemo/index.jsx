@@ -1,6 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react'
-import BackToHome from '../../../components/backToHome';
-import Title from "../../../components/title";
+import Header from "../../../components/header";
 
 export default function UseMemo() {
   const [number, setNumber] = useState(0);
@@ -23,8 +22,7 @@ export default function UseMemo() {
 
   return (
     <>
-      <BackToHome />
-      <Title title="Use Memo" />
+      <Header title="useMemo" page="Hooks" toPage="/hooks" />
       <h4>useMemo</h4>
       <input
         type="number"

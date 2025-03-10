@@ -15,10 +15,10 @@ const Home = () => {
             <Link to="/portals">React Portals</Link>
           </li>
           <li>
-            <Link to="/lazysuspense">Lazy Suspense</Link>
+            <Link to="/lazysuspense">Lazy & Suspense</Link>
           </li>
           <li>
-            <Hooks />
+            <Link to="/hooks">Built-in React Hooks</Link>
           </li>
         </ul>
       </nav>

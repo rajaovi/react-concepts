@@ -1,17 +1,15 @@
 import React from "react";
+import Header from "../../../components/header";
 import FunctionComponent from "./functionComponent";
-import BackToHome from "../../../components/backToHome";
 import ThemeProvider from "./themeContext";
 import PropDrilling from "./propDrilling";
 import AvoidPropDrilling from "./avoidPropDrilling";
 import "./index.css";
-import Title from "../../../components/title";
 
 const UseContext = () => {
   return (
     <>
-      <BackToHome />
-      <Title title="Use Context" />
+      <Header title="useContext" page="Hooks" toPage="/hooks" />
       <ThemeProvider>
         <FunctionComponent />
         <>

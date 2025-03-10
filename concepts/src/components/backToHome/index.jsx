@@ -1,11 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const BackToHome = () => {
+const BackToHome = ({ page, toPage }) => {
   return (
     <>
-      <Link className="backToHome" to="/">
-        &larr; Back to Home
+      <Link className="backToHome" to={toPage}>
+        &larr; Back to {page} page
       </Link>
     </>
   );

@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
 }
-.homeNav li {
+li {
   padding: 3px 0;
   list-style: decimal;
 }

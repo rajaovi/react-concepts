@@ -1,10 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Header from "../../components/header";
 
 export const Hooks = () => {
   return (
     <>
-      <p>Built-in React Hooks</p>
+      <Header title="Built-in React Hooks" />
       <ul>
         <li>
           <h5>State Hooks</h5>

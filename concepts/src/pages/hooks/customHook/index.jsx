@@ -1,7 +1,6 @@
-import React from 'react';
-import BackToHome from "../../../components/backToHome";
-import useFetch from './useFetch';
-import Title from "../../../components/title";
+import React from "react";
+import useFetch from "./useFetch";
+import Header from "../../../components/header";
 
 export default function CustomHook() {
   const { data, loading, error } = useFetch(
@@ -15,8 +14,7 @@ export default function CustomHook() {
 
   return (
     <>
-      <BackToHome />
-      <Title title="Custom Hook" />
+      <Header title="Custom Hook" page="Hooks" toPage="/hooks" />
       <div>
         {data.map((item) => (
           <p key={item.id}>{item.title}</p>

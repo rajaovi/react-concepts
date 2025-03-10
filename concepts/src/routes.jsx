@@ -11,12 +11,14 @@ import CustomHook from "./pages/hooks/customHook";
 import UseReducer from "./pages/hooks/useReducer";
 import Portals from "./pages/portals";
 import LazySuspense from "./pages/lazySuspense";
+import { Hooks } from "./pages/hooks";
 
 const RoutePage = () => {
   return (
     <Routes>
       <Route index element={<Home />} />
       <Route path="/liftstate" element={<LiftingState />} />
+      <Route path="/hooks" element={<Hooks />} />
       <Route path="/usememo" element={<UseMemo />} />
       <Route path="/usecallback" element={<UseCallBack />} />
       <Route path="/usecontext" element={<UseContext />} />
