@@ -12,6 +12,7 @@ import UseReducer from "./pages/hooks/useReducer";
 import Portals from "./pages/portals";
 import LazySuspense from "./pages/lazySuspense";
 import { Hooks } from "./pages/hooks";
+import Redux from "./pages/redux";
 
 const RoutePage = () => {
   return (
@@ -27,6 +28,7 @@ const RoutePage = () => {
       <Route path="/usereducer" element={<UseReducer />} />
       <Route path="/portals" element={<Portals />} />
       <Route path="/lazysuspense" element={<LazySuspense />} />
+      <Route path="/redux" element={<Redux />} />
     </Routes>
   );
 };

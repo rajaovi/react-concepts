@@ -20,6 +20,9 @@ const Home = () => {
           <li>
             <Link to="/hooks">Built-in React Hooks</Link>
           </li>
+          <li>
+            <Link to="/redux">Redux</Link>
+          </li>
         </ul>
       </nav>
     </div>
