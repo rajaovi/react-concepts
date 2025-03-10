@@ -4,12 +4,8 @@ createPortal is a function that allows to render React children into a different
 
 For example by using   portals we can create like modal, tooltips, notification
 
-- createPortal takes two arguments: the React children to render and the DOM node where you want to render them. 
+createPortal takes two arguments: the React children to render and the DOM node where you want to render them. 
 
-
-- It Optimize the performance of your React application by memoizing expensive computations. Memoization is the process of caching the results of a function call based on its input parameters.
-- The useMemo hook takes two arguments: A function that performs the calculation and An array of dependencies.
-- The hook will only recalculate the value when one of the dependencies has changed. Otherwise, it will return the cached value from the previous render.
 
 ### How to use it:
 
