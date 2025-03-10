@@ -1,6 +1,6 @@
 import React from "react";
 import BackToHome from "../backToHome";
-import Title from "../title";
+import Title from "../common/title";
 
 const Header = ({ title, page = "Home", toPage = "/" }) => {
   return (
