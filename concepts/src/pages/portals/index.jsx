@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Modal from "../../components/common/modal";
 import Header from "../../components/header";
+import Modal from "../../components/common/modal";
 
 const Portals = () => {
   const [isModalOpened, setIsModalOpened] = useState(false);
   return (
     <>
-      <Header />
+      <Header title="React Portals" />
       <div>
         <button onClick={() => setIsModalOpened(true)}>Open Model</button>
         <Modal isOpened={isModalOpened} onClose={() => setIsModalOpened(false)}>

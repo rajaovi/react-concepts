@@ -15,6 +15,9 @@ const Home = () => {
             <Link to="/portals">React Portals</Link>
           </li>
           <li>
+            <Link to="/lazysuspense">Lazy Suspense</Link>
+          </li>
+          <li>
             <Hooks />
           </li>
         </ul>

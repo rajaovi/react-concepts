@@ -2,11 +2,11 @@ import React from "react";
 import BackToHome from "../backToHome";
 import Title from "../title";
 
-const Header = () => {
+const Header = ({ title }) => {
   return (
     <header>
       <BackToHome />
-      <Title title="Use Context" />
+      <Title title={title} />
     </header>
   );
 };

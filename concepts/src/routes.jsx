@@ -10,6 +10,7 @@ import UseTransition from "./pages/hooks/useTransition";
 import CustomHook from "./pages/hooks/customHook";
 import UseReducer from "./pages/hooks/useReducer";
 import Portals from "./pages/portals";
+import LazySuspense from "./pages/lazySuspense";
 
 const RoutePage = () => {
   return (
@@ -23,6 +24,7 @@ const RoutePage = () => {
       <Route path="/customhook" element={<CustomHook />} />
       <Route path="/usereducer" element={<UseReducer />} />
       <Route path="/portals" element={<Portals />} />
+      <Route path="/lazysuspense" element={<LazySuspense />} />
     </Routes>
   );
 };
