@@ -12,6 +12,9 @@ const Home = () => {
             <Link to="/lifitingstate">Lifting State Up</Link>
           </li>
           <li>
+            <Link to="/portals">React Portals</Link>
+          </li>
+          <li>
             <Hooks />
           </li>
         </ul>

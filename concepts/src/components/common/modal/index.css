@@ -1,0 +1,30 @@
+.modal {
+    background-color: #fff;
+    left: 50%;
+    height: 500px;
+    padding: 10px;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    z-index: 3;
+}
+
+.closeButton {
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.7);
+}
+.modalContent {
+    margin-top: 40px;
+}

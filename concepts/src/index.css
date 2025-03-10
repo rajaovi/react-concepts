@@ -35,3 +35,9 @@ button:hover {
     background: #026593;
 
 }
+p {
+    margin: 6px 0;
+}
+li p {
+    margin: 3px 0;
+}

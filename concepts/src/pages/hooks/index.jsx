@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Hooks = () => {
   return (
     <>
-      <h4>Built-in React Hooks</h4>
+      <p>Built-in React Hooks</p>
       <ul>
         <li>
           <h5>State Hooks</h5>
