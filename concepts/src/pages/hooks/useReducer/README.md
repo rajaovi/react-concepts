@@ -2,9 +2,9 @@
 `useReducer` is a React Hook that is used for managing complex state logic in functional components. It is an alternative to `useState` and is particularly useful when you have state that depends on previous state or when you need to manage multiple sub-values in a single state object.
 
 #### Key Features of useReducer
-- **Reducer Function:** useReducer takes a reducer function as its first argument. This function receives the current state and an action, and it returns a new state based on the action type.
-- **Initial State:** The second argument to useReducer is the initial state.
-- **Dispatch Function:** useReducer returns an array with two elements: the current state and a dispatch function. You can call the dispatch function with an action to update the state.
+- **Reducer Function:** `useReducer` takes a reducer function as its first argument. This function receives the current state and an action, and it returns a new state based on the action type.
+- **Initial State:** The second argument to `useReducer` is the initial state.
+- **Dispatch Function:** `useReducer` returns an array with two elements: the current state and a dispatch function. You can call the dispatch function with an action to update the state.
 - **Syntax:** `const [state, dispatch] = useReducer(reducer, initialState)`; 
 
 #### Example
