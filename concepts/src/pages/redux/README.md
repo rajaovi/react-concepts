@@ -89,5 +89,5 @@ const addUser = (e) => {
 
 #### Refer Code
 - [main](../../main.jsx)
-- [store](../../store/reducer.js)
+- [store](../../store/reducers/)
 - [redux](./index.jsx)
