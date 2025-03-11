@@ -5,29 +5,29 @@ React Hooks are a feature introduced in React 16.8 that allow you to use state a
 - They can only be called inside React functional components or custom Hooks.
 - They must be called at the top level of the component, not within loops, conditions, or nested functions.
 
-### Hooks available in React
-* State Hooks
+#### Hooks available in React
+* **State Hooks**
   * useState
   * useReducer
-* Context Hooks
+* **Context Hooks**
   * useContext
-* Ref Hooks
+* **Ref Hooks**
   * useRef
   * useImperativeHandle
-* Effect Hooks
+* **Effect Hooks**
   * useEffect
   * useLayoutEffect
   * useInsertionEffect
-* Performance Hooks
+* **Performance Hooks**
   * useMemo
   * useCallback
   * useTransition
   * useDeferredValue
-* Other Hooks
+* **Other Hooks**
   * useDebugValue
   * useId
   * useSyncExternalStore
   * useActionState
-* Custom Hooks
+* **Custom Hooks**
   * `use` keyword in from of a function name - Example `useFetch, useTodopComponent`
 
