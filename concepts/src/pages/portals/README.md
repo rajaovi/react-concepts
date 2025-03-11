@@ -33,7 +33,7 @@ Add a new div[modal] to the body of the index.html file
 ```
 <body>
   <div id="root"></div>
-  <div id="modal"></div>
+  <div id="modal"></div> // New DOM node
   <script type="module" src="/src/main.jsx"></script>
 </body>
 ```
@@ -42,21 +42,22 @@ In return of the Modal component we are going to use the createPortal to render 
 ```
 import { createPortal } from 'react-dom';
 const Modal = ({isOpened, children, onClose}) => {
-  if(!isOpened) {
-      return null
-  }
-  return createPortal (
-    <div>
-      <div className="overlay">
-        <div className="modal">
-          <div>
-            <span className='closeButton' onClick={onClose}>X</span>
-            <div className='modalContent'>{children}</div>
-          </div>
+if(!isOpened) {
+  return null
+}
+return createPortal (
+  <div>
+    <div className="overlay">
+      <div className="modal">
+        <div>
+          <span className='closeButton' onClick={onClose}>X</span>
+          <div className='modalContent'>{children}</div>
         </div>
       </div>
-    </div>,
-    document.getElementById('modal')
-  )
-}
+    </div>
+  </div>,
+  document.getElementById('modal')
+)}
 ```
+#### Refer Code
+- [index](./index.jsx)
