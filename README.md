@@ -4,11 +4,11 @@ This project Learning purpose for React Concepts
 ## This repo was reference to React major concepts with example:
 This will give you some quick idea & examples of React concepts.
 
-### Table of Contents
+### Topic with Examples
+- [React Hooks](concepts/src/pages/hooks/)
 - [Redux](concepts/src/pages/redux)
 - [React Portal](concepts/src/pages/portals/)
 - [Lifting State Up](concepts/src/pages/liftingState/README.md)
-- [React Hooks](concepts/src/pages/reactHooks)
 - [React Context API](concepts/src/pages/reactContextAPI)
 - [React Router](concepts/src/pages/reactRouter)
 
@@ -32,14 +32,14 @@ Fiber is the reconciliation algorithm and rendering engine for React, introduced
 
 Here are some key features and improvements that Fiber brought to React:
 
-- Incremental Rendering: Fiber allows React to pause and resume work on rendering. This means that React can break rendering work into chunks, which can be spread out over multiple frames. This is particularly useful for keeping the UI responsive during heavy computations or rendering tasks.
+- **Incremental Rendering:** Fiber allows React to pause and resume work on rendering. This means that React can break rendering work into chunks, which can be spread out over multiple frames. This is particularly useful for keeping the UI responsive during heavy computations or rendering tasks.
 
-- Prioritization of Updates: Fiber introduces a more sophisticated scheduling mechanism that allows React to prioritize updates based on their importance. This means that more critical updates (like user interactions) can be processed before less critical ones (like background data fetching).
+- **Prioritization of Updates:** Fiber introduces a more sophisticated scheduling mechanism that allows React to prioritize updates based on their importance. This means that more critical updates (like user interactions) can be processed before less critical ones (like background data fetching).
 
-- Concurrency: With Fiber, React can handle multiple tasks at once, making it more efficient in managing updates and rendering. This is a step towards enabling concurrent rendering, which allows React to work on multiple tasks simultaneously without blocking the main thread.
+- **Concurrency:** With Fiber, React can handle multiple tasks at once, making it more efficient in managing updates and rendering. This is a step towards enabling concurrent rendering, which allows React to work on multiple tasks simultaneously without blocking the main thread.
 
-- Error Boundaries: Fiber introduced the concept of error boundaries, which allows developers to catch JavaScript errors in their component tree and display a fallback UI instead of crashing the entire application.
+- **Error Boundaries:** Fiber introduced the concept of error boundaries, which allows developers to catch JavaScript errors in their component tree and display a fallback UI instead of crashing the entire application.
 
-- Support for Suspense: Fiber laid the groundwork for features like Suspense, which allows components to "wait" for something (like data fetching) before rendering. This helps in managing asynchronous operations more effectively.
+- **Support for Suspense:** Fiber laid the groundwork for features like Suspense, which allows components to "wait" for something (like data fetching) before rendering. This helps in managing asynchronous operations more effectively.
 
-- Improved Component Lifecycles: Fiber provides a more consistent and predictable lifecycle for components, making it easier for developers to manage component state and side effects.
+- **Improved Component Lifecycles:** Fiber provides a more consistent and predictable lifecycle for components, making it easier for developers to manage component state and side effects.
