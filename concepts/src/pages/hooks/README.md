@@ -29,6 +29,6 @@ React Hooks are a feature introduced in React 16.8 that allow you to use state a
   * useId
   * useSyncExternalStore
   * useActionState
-*  Custom Hooks
-  * Custom Hook
+* Custom Hooks
+  * `use` keyword in from of a function name - Example `useFetch, useTodopComponent`
 
