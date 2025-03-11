@@ -1,7 +1,6 @@
 import React from "react";
 import Header from "../../components/header";
 import { useDispatch, useSelector } from "react-redux";
-import { addUser as addUserAction } from "../../store/users";
 
 const Redux = () => {
   const [userName, setUserName] = React.useState("");
@@ -12,7 +11,7 @@ const Redux = () => {
 
   const addUser = (e) => {
     e.preventDefault();
-    dispatch(addUserAction(userName));
+    dispatch({ type: "ADD_USER", payload: userName });
   };
   return (
     <>

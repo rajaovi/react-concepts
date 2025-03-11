@@ -1,9 +1,9 @@
 const initialState = {
-    posts: [],
-}
+  posts: [],
+};
 
 const reducer = (state = initialState) => {
-    return state
-}
+  return state;
+};
 
-export default reducer
+export default reducer;
