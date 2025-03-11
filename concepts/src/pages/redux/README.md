@@ -12,8 +12,8 @@ React Redux is a tool that helps manage and share data (state) across different 
 Store is a JavaScript object that stores an application's state. It's the central hub for an app's state, and is considered the single source of truth for that state.
 Create store in main / index root file
 ```
-import { configureStore } from "@reduxjs/toolkit";
-const store = configureStore({ reducer: reducer });
+import { createStore } from "redux";
+const store = createStore(reducer, undefined);
 ```
 #### Providers
 Provider makes the Redux store available to any part of your app. This allows you to avoid passing the store as a prop to each component. 
@@ -21,13 +21,47 @@ Wrapp your app with provider and pass the store
 './store' contains your [reducers](#reducerseducers)
 ```
 import { Provider } from "react-redux";
-import reducer from "./store";
+import reducer from "./store/reducers";
 <Provider store={store}>
     <App />
 </Provider>
 ```
 #### Reducers
 Reducer is a function that updates an application's state in response to user actions. Reducers are pure functions that are a key part of Redux state management
+- combineReucer -  combine all your reducer and returns a single combined reducer function
 ```
+import { combineReducers } from "redux";
+import posts from "./posts";
+import users from "./users";
+
+export default combineReducers({
+  posts,
+  users,
+});
+
+// posts reducer
+const initialState = {
+  posts: [],
+};
+
+export default function reducer(state = initialState) {
+  return state;
+};
+
+// user reducer
+const initialState = {
+  data: [],
+};
+const reducer = (state = initialState, action) => {
+  switch (action.type) {
+    case "ADD_USER": {
+      return { ...state, data: [...state.data, action.payload] };
+    }
+    default:
+      return state;
+  }
+};
+
+export default reducer;
 
 ```

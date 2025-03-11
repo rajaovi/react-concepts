@@ -2,8 +2,6 @@ const initialState = {
   posts: [],
 };
 
-const reducer = (state = initialState) => {
+export default function reducer(state = initialState) {
   return state;
 };
-
-export default reducer;
