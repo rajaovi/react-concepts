@@ -22,7 +22,7 @@ export const Hooks = () => {
           <h5>Context Hooks</h5>
           <ul>
             <li>
-              <Link to="/usecontext">! Use Context</Link>
+              <Link to="/usecontext">Use Context</Link>
             </li>
           </ul>
         </li>
@@ -30,10 +30,10 @@ export const Hooks = () => {
           <h5>Ref Hooks</h5>
           <ul>
             <li>
-              <Link>useRef</Link>
+              <Link to="/useref">useRef</Link>
             </li>
             <li>
-              <Link>useImperativeHandle</Link>
+              <Link to="/useimperativehandle">useImperativeHandle</Link>
             </li>
           </ul>
         </li>
@@ -55,13 +55,13 @@ export const Hooks = () => {
           <h5>Performance Hooks</h5>
           <ul>
             <li>
-              <Link to="/usememo">! Use Memo</Link>
+              <Link to="/usememo">Use Memo</Link>
             </li>
             <li>
-              <Link to="/usecallback">! Use Callback</Link>
+              <Link to="/usecallback">Use Callback</Link>
             </li>
             <li>
-              <Link to="/usetransition">! Use Transition</Link>
+              <Link to="/usetransition">Use Transition</Link>
             </li>
             <li>
               <Link>useDeferredValue</Link>
@@ -89,7 +89,7 @@ export const Hooks = () => {
           <h5>Custom Hooks</h5>
           <ul>
             <li>
-              <Link to="/customhook">! Custom Hook</Link>
+              <Link to="/customhook">Custom Hook</Link>
             </li>
           </ul>
         </li>

@@ -16,6 +16,7 @@ import Redux from "./pages/redux";
 import UseState from "./pages/hooks/useState";
 import UseEffect from "./pages/hooks/useEffect";
 import UseLayoutEffect from "./pages/hooks/useLayoutEffect";
+import UseRef from "./pages/hooks/useRef";
 
 const RoutePage = () => {
   return (
@@ -25,6 +26,7 @@ const RoutePage = () => {
       <Route path="/hooks" element={<Hooks />} />
       <Route path="/usestate" element={<UseState />} />
       <Route path="/usereducer" element={<UseReducer />} />
+      <Route path="/useref" element={<UseRef />} />
       <Route path="/usecontext" element={<UseContext />} />
       <Route path="/useeffect" element={<UseEffect />} />
       <Route path="/usememo" element={<UseMemo />} />
