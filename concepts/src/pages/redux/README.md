@@ -18,7 +18,7 @@ const store = createStore(reducer, undefined);
 #### Providers
 Provider makes the Redux store available to any part of your app. This allows you to avoid passing the store as a prop to each component. 
 Wrapp your app with provider and pass the store
-'./store' contains your [reducers](#reducerseducers)
+'./store' contains your reducers.
 ```
 import { Provider } from "react-redux";
 import reducer from "./store/reducers";
@@ -26,6 +26,16 @@ import reducer from "./store/reducers";
     <App />
 </Provider>
 ```
+
+#### Actions
+Actions are JavaScript object that contains information. Actions are the only source of information for the store. It basically carries a payload of information from the application to the store.
+```
+const Actions = {
+  type: '',
+  payload: ''
+}
+```
+
 #### Reducers
 Reducer is a function that updates an application's state in response to user actions. Reducers are pure functions that are a key part of Redux state management
 - combineReucer -  combine all your reducer and returns a single combined reducer function

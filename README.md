@@ -7,7 +7,8 @@ This project Learning purpose for React Concepts
 This will give you some quick idea & examples of React concepts.
 
 ### Table of Contents
-1. [Redux](concepts/src/pages/redux)
-2. [React Hooks](concepts/src/pages/reactHooks)
-3. [React Context API](concepts/src/pages/reactContextAPI)
-4. [React Router](concepts/src/pages/reactRouter)
+- [Redux](concepts/src/pages/redux)
+- [Lifting State Up](concepts/src/pages/liftingState/README.md)
+- [React Hooks](concepts/src/pages/reactHooks)
+- [React Context API](concepts/src/pages/reactContextAPI)
+- [React Router](concepts/src/pages/reactRouter)
