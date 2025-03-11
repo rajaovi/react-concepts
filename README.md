@@ -24,7 +24,7 @@ This will give you some quick idea & examples of React concepts.
 15. [Error Boundaries](#error-boundaries)
 16. [Lifecycle Methods](#lifecycle-methods)
 17. [React Router](#react-router)
-18. [Redux](#redux)
+18. [Redux](concepts/src/pages/redux)
 19. [React Query](#react-query)
 20. [React Hook Form](#react-hook-form)
 21. [React Select](#react-select)
