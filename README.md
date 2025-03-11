@@ -6,6 +6,7 @@ This will give you some quick idea & examples of React concepts.
 
 ### Table of Contents
 - [Redux](concepts/src/pages/redux)
+- [React Portal](concepts/src/pages/portals/)
 - [Lifting State Up](concepts/src/pages/liftingState/README.md)
 - [React Hooks](concepts/src/pages/reactHooks)
 - [React Context API](concepts/src/pages/reactContextAPI)
