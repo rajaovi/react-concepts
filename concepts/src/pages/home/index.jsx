@@ -9,16 +9,16 @@ const Home = () => {
       <nav className="homeNav">
         <ul>
           <li>
-            <Link to="/lifitingstate">Lifting State Up</Link>
+            <Link to="/hooks">Built-in React Hooks</Link>
+          </li>
+          <li>
+            <Link to="/liftstate">Lifting State Up</Link>
           </li>
           <li>
             <Link to="/portals">React Portals</Link>
           </li>
           <li>
             <Link to="/lazysuspense">Lazy & Suspense</Link>
-          </li>
-          <li>
-            <Link to="/hooks">Built-in React Hooks</Link>
           </li>
           <li>
             <Link to="/redux">Redux</Link>

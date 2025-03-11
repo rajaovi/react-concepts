@@ -25,9 +25,8 @@ button {
     border: 0;
     color: white;
     margin-right: 6px;
-    padding: 0.7em 1.8em;
-    font-size: 1.1em;
-    font-family: cursive;
+    padding: 12px;
+    font-size: 14px;
     cursor: pointer;
     font-weight: bold;
 }
@@ -40,4 +39,10 @@ p {
 }
 li p {
     margin: 3px 0;
+}
+input {
+    padding: 10px 12px;
+    min-width: 200px;
+    font-size: 15px;
+    margin: 8px 10px;
 }
