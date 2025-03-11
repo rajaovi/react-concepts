@@ -26,5 +26,5 @@ const addToCart = useCallback(() => {
 
 ```
 
-##### Refer Code
+#### Refer Code
 - [index](./index.jsx)
