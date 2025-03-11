@@ -13,6 +13,7 @@ import Portals from "./pages/portals";
 import LazySuspense from "./pages/lazySuspense";
 import { Hooks } from "./pages/hooks";
 import Redux from "./pages/redux";
+import UseState from "./pages/hooks/useState";
 
 const RoutePage = () => {
   return (
@@ -20,6 +21,7 @@ const RoutePage = () => {
       <Route index element={<Home />} />
       <Route path="/liftstate" element={<LiftingState />} />
       <Route path="/hooks" element={<Hooks />} />
+      <Route path="/usestate" element={<UseState />} />
       <Route path="/usememo" element={<UseMemo />} />
       <Route path="/usecallback" element={<UseCallBack />} />
       <Route path="/usecontext" element={<UseContext />} />

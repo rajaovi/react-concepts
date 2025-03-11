@@ -11,7 +11,7 @@ export const Hooks = () => {
           <h5>State Hooks</h5>
           <ul>
             <li>
-              <Link>useState</Link>
+              <Link to="/useState">useState</Link>
             </li>
             <li>
               <Link to="/usereducer">useReducer</Link>
@@ -94,23 +94,6 @@ export const Hooks = () => {
           </ul>
         </li>
       </ul>
-      {/* <ul>
-        <li>
-          <Link to="/usememo">Use Memo</Link>
-        </li>
-        <li>
-          <Link to="/usecallback">Use Callback</Link>
-        </li>
-        <li>
-          <Link to="/usecontext">Use Context</Link>
-        </li>
-        <li>
-          <Link to="/usetransition">Use Transition</Link>
-        </li>
-        <li>
-          <Link to="/customhook">Custom Hook</Link>
-        </li>
-      </ul> */}
     </>
   );
 };
