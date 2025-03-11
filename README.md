@@ -7,4 +7,4 @@ This project Learning purpose for React Concepts
 This will give you some quick idea & examples of React concepts.
 
 ### Table of Contents
-1. [Redux](#redux)
+1. [Redux](concepts/src/pages/redux)
