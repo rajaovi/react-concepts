@@ -16,7 +16,7 @@ React Hooks are a feature introduced in React 16.8 that allow you to use state a
   * useImperativeHandle
 * **Effect Hooks**
   * [useEffect](useEffect/)
-  * useLayoutEffect
+  * [useLayoutEffect](useLayoutEffect/)
   * useInsertionEffect
 * **Performance Hooks**
   * useMemo

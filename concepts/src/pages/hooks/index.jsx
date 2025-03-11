@@ -44,7 +44,7 @@ export const Hooks = () => {
               <Link to="/useeffect">useEffect</Link>
             </li>
             <li>
-              <Link>useLayoutEffect</Link>
+              <Link to="/useLayoutEffect">useLayoutEffect</Link>
             </li>
             <li>
               <Link>useInsertionEffect</Link>

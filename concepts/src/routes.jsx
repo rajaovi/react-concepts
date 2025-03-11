@@ -15,6 +15,7 @@ import { Hooks } from "./pages/hooks";
 import Redux from "./pages/redux";
 import UseState from "./pages/hooks/useState";
 import UseEffect from "./pages/hooks/useEffect";
+import UseLayoutEffect from "./pages/hooks/useLayoutEffect";
 
 const RoutePage = () => {
   return (
@@ -23,13 +24,14 @@ const RoutePage = () => {
       <Route path="/liftstate" element={<LiftingState />} />
       <Route path="/hooks" element={<Hooks />} />
       <Route path="/usestate" element={<UseState />} />
+      <Route path="/usereducer" element={<UseReducer />} />
+      <Route path="/usecontext" element={<UseContext />} />
       <Route path="/useeffect" element={<UseEffect />} />
       <Route path="/usememo" element={<UseMemo />} />
+      <Route path="/useLayoutEffect" element={<UseLayoutEffect />} />
       <Route path="/usecallback" element={<UseCallBack />} />
-      <Route path="/usecontext" element={<UseContext />} />
       <Route path="/usetransition" element={<UseTransition />} />
       <Route path="/customhook" element={<CustomHook />} />
-      <Route path="/usereducer" element={<UseReducer />} />
       <Route path="/portals" element={<Portals />} />
       <Route path="/lazysuspense" element={<LazySuspense />} />
       <Route path="/redux" element={<Redux />} />
