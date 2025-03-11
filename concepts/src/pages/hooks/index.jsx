@@ -41,7 +41,7 @@ export const Hooks = () => {
           <h5>Effect Hooks</h5>
           <ul>
             <li>
-              <Link>useEffect</Link>
+              <Link to="/useeffect">useEffect</Link>
             </li>
             <li>
               <Link>useLayoutEffect</Link>

@@ -14,6 +14,7 @@ import LazySuspense from "./pages/lazySuspense";
 import { Hooks } from "./pages/hooks";
 import Redux from "./pages/redux";
 import UseState from "./pages/hooks/useState";
+import UseEffect from "./pages/hooks/useEffect";
 
 const RoutePage = () => {
   return (
@@ -22,6 +23,7 @@ const RoutePage = () => {
       <Route path="/liftstate" element={<LiftingState />} />
       <Route path="/hooks" element={<Hooks />} />
       <Route path="/usestate" element={<UseState />} />
+      <Route path="/useeffect" element={<UseEffect />} />
       <Route path="/usememo" element={<UseMemo />} />
       <Route path="/usecallback" element={<UseCallBack />} />
       <Route path="/usecontext" element={<UseContext />} />
