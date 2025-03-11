@@ -65,3 +65,26 @@ const reducer = (state = initialState, action) => {
 export default reducer;
 
 ```
+
+#### How to use Redux inside functional component
+- useSelector - allows you to access the state in your functional component
+- useDispatch - allows you to dispatch an action in your functional component
+
+```
+import { useDispatch, useSelector } from "react-redux";
+
+// Here you can access you redux state from store
+const users = useSelector((state) => state.users.data);
+
+// Update your state using dispatch method.
+const dispatch = useDispatch();
+const addUser = (e) => {
+    e.preventDefault();
+    dispatch({ type: "ADD_USER", payload: userName });
+};
+
+<button onClick={addUser} type="submit">Add User</button>
+
+```
+
+[Refer Code Here](./index.jsx)
