@@ -8,14 +8,14 @@ React Hooks are a feature introduced in React 16.8 that allow you to use state a
 #### Hooks available in React
 * **State Hooks**
   * [useState](useState/)
-  * useReducer
+  * [useReducer](useReducer/)
 * **Context Hooks**
   * useContext
 * **Ref Hooks**
   * useRef
   * useImperativeHandle
 * **Effect Hooks**
-  * useEffect
+  * [useEffect](useEffect/)
   * useLayoutEffect
   * useInsertionEffect
 * **Performance Hooks**

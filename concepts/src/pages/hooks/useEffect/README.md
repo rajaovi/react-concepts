@@ -1,7 +1,7 @@
 # Use Effect
 `useEffect` is a Hook that allows you to perform side effects in functional components. Side effects can include data fetching, subscriptions, manual DOM manipulations, and more. `useEffect` is called after the render is committed to the screen, making it a suitable place to handle operations that need to occur after the component has rendered.
 
-#### How to use it:
+#### Key Features of `useEffect`
 - **Import the Hook:** First, you need to import useEffect from React.
 - **Define the Effect:** Call useEffect inside your functional component to define the side effect you want to perform.
 - **Cleanup (Optional):** You can return a cleanup function from the effect to clean up resources when the component unmounts or before the effect runs again.
