@@ -1,0 +1,43 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li {
+    color: #333;
+    font-size: 14px;
+    list-style: none;
+}
+a {
+    color: blue;
+    font-size: 14px;
+    text-decoration: none;
+}
+h4 {
+    font-size: 15px;
+    margin: 8px 0;
+}
+h5 {
+    color: #333;
+    font-size: 14px;
+    margin: 5px 0;
+}
+button {
+    background: #0689c7;
+    border: 0;
+    color: white;
+    margin-right: 6px;
+    padding: 0.7em 1.8em;
+    font-size: 1.1em;
+    font-family: cursive;
+    cursor: pointer;
+    font-weight: bold;
+}
+button:hover {
+    background: #026593;
+
+}
+p {
+    margin: 6px 0;
+}
+li p {
+    margin: 3px 0;
+}
