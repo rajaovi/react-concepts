@@ -8,13 +8,13 @@ Here todos state is common used in child component, so we lift it up to parent c
 ```
 const [todos, setTodos] = useState(["todo 1", "todo 2", "todo 3"]);
 <div>
-    <TodoCount todos={todos} />
-    <ToDoList todos={todos} />
-    <AddToDo setTodos={setTodos} />
+  <TodoCount todos={todos} />
+  <ToDoList todos={todos} />
+  <AddToDo setTodos={setTodos} />
 </div>
 ```
 ##### Todo count
-Using parent state
+Using parent state to display the length
 ```
 const TodoCount = ({ todos }) => {
   return <div>Total number of Todos: {todos.length}</div>;
@@ -50,6 +50,9 @@ const AddToDo = ({ setTodos }) => {
     </form>
   );
 };
-
 ```
+
+#### Refer Code
+- [index](./index.jsx)
+
 
