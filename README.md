@@ -8,7 +8,8 @@ This will give you some quick idea & examples of React concepts.
 - [React Hooks](concepts/src/pages/hooks/)
 - [Redux](concepts/src/pages/redux)
 - [React Portal](concepts/src/pages/portals/)
-- [Lifting State Up](concepts/src/pages/liftingState/README.md)
+- [Lifting State Up](concepts/src/pages/liftingState/)
+- [Lazy Loading](concepts/src/pages/lazySuspense/)
 - [React Context API](concepts/src/pages/reactContextAPI)
 - [React Router](concepts/src/pages/reactRouter)
 
@@ -23,6 +24,14 @@ When a component re-renders, React creates a new virtual DOM tree and compares i
 - Rendering - When a component's state or props change, React re-renders the component and creates a new virtual DOM tree.
 - Diffing - React compares the new virtual DOM tree with the previous one to identify the differences. This process is called "diffing." 
 - Patching - Based on the differences identified during the diffing process, React updates only the necessary parts of the actual DOM. This process is called "patching."
+
+#### Fiber Reconciliation
+Priorities:
+- Discrete Event: input, click
+- user blocking: scroll
+- normal prio: data fetch
+- low prio: Root change
+- lowest prio: pre-render
 
 ### React Fiber
 [Refrence](https://github.com/acdlite/react-fiber-architecture)
@@ -43,3 +52,21 @@ Here are some key features and improvements that Fiber brought to React:
 - **Support for Suspense:** Fiber laid the groundwork for features like Suspense, which allows components to "wait" for something (like data fetching) before rendering. This helps in managing asynchronous operations more effectively.
 
 - **Improved Component Lifecycles:** Fiber provides a more consistent and predictable lifecycle for components, making it easier for developers to manage component state and side effects.
+
+### How it different from virtual dom
+Fiber is a new intermediate strcture that alows us to pause and prioritize the render process to make it asynchronus.
+
+Earlier we having React element that would create a virtual dom and that will be translated into an actual DOM with reconiliation.
+But the problem here with this is that it's a very synchronus process
+
+in version 16 fiber node was introduced which is an intermediate structure and bascially all the work of rendering component is dome by fiber node.
+once we are done we can then compute the Virtual dom from the fibre tree
+
+
+### Diffing Algo
+- if diff type redo
+- assume keys are stable & unique
+- if same type, diff children
+    - Don't use index as key - if we add or delete index will get change,
+
+### Concurent React
