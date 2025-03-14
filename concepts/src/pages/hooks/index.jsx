@@ -93,6 +93,16 @@ export const Hooks = () => {
             </li>
           </ul>
         </li>
+        <li>
+          <h5>New Hooks [v-19]</h5>
+          <ul>
+            <li>
+              <Link>useActionState</Link>
+              <Link>useFormStatus</Link>
+              <Link>useOptimistic</Link>
+            </li>
+          </ul>
+        </li>
       </ul>
     </>
   );
