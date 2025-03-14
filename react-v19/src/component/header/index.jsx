@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import BackToHome from "../common/backToHome";
 
-const Header = () => {
+const Header = ({ title, page = "Home", toPage = "/" }) => {
   return (
     <header>
-        <div>Header</div>
+      <BackToHome page={page} toPage={toPage} />
+      <h2>{title}</h2>
     </header>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
