@@ -4,11 +4,12 @@
 - [React.createElement](#reactcreateelement)
 - [JSX](#jsx)
 - [Virtual DOM](#virtual-dom)
-- [ReactDOM](#react-dom)
+- [React DOM](#react-dom)
 - [React DOM Server](#react-dom-server)
 - [Elements](#elements-in-react)
 - [Components](#components-in-react)
 - [Events](#events-in-react)
+- [React Event Handling](#react-event-handling)
 - [Synthetic Events](#synthetic-events)
 - [Component lifecycle](#lifecycle-method)
 - [Pure Components](#pure-components)
@@ -19,13 +20,14 @@
 - [PropTypes](#proptypes)
 - [React Inline Style](#react-inline-style)
 - [Fragments](#fragments)
+- [Higher-Order Components](#higher-order-components)
 - [Hooks](#hooks)
 - [React Portal](#react-portal)
 - [Lifting State Up](#lifting-state-up)
-- [Lazy Loading](#lazy-loading)
+- [Lazy Loading](#lazy-loading--code-splitting)
+- [Code Splitting](#lazy-loading--code-splitting)
 - [React Router](#react-router)
-- [Redux](#react-redux
-)
+- [Redux](#react-redux)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -33,7 +35,6 @@ Example
 ```̉
 const element = React.createElement('h1', null, 'Hello, world!');
 ```
-
 ## [:top:](#table-of-concepts)
 
 #### JSX
@@ -49,6 +50,8 @@ const element = React.createElement('h1', null, 'Hello, JSX!');
 
 #### Virtual DOM
 The virtual DOM (VDOM) is a programming concept where a virtual representation of the UI is kept in memory and synced with the real DOM.
+
+## [:top:](#table-of-concepts)
 
 #### React DOM
 ReactDOM serves as a bridge between React components and the browser's DOM. Provides specific methods to manipulate the DOM, such as render(), createRoot(), and hydrateRoot().
@@ -76,7 +79,6 @@ const staticMarkupString = ReactDOMServer.renderToStaticMarkup(<MyComponent />);
 console.log(staticMarkupString);
 // Output: <div>Hello, Server-Side Rendering!</div>
 ```
-
 ## [:top:](#table-of-concepts)
 
 #### Elements in React
@@ -106,6 +108,26 @@ class MyComponent extends React.Component {
 #### Events in React
 In React, events are actions or occurrences, often triggered by user interactions such as `onClick`, `onChange`, `onSubmit`, `onKeyDown`, `onFocus`,
 
+## [:top:](#table-of-concepts)
+
+#### React event handling
+Event handling in React refers to how React components respond to user interactions. These interactions can include clicking buttons, typing in input fields, submitting forms, and more. 
+```
+function MyComponent() {
+  const [count, setCount] = useState(0);
+
+  const handleClick = () => {
+    setCount(count + 1);
+  };
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={handleClick}>Increment</button>
+    </div>
+  );
+}
+```
 ## [:top:](#table-of-concepts)
 
 #### Synthetic Events:
@@ -338,31 +360,90 @@ function MyComponent() {
 ```
 ## [:top:](#table-of-concepts)
 
+#### Higher order components
+(HOC) is a function that takes a component as an argument and returns a new component with enhanced functionality. It's a pattern for reusing component logic.
+```
+// HOC
+function withLoading(WrappedComponent) {
+  return function WithLoadingComponent(props) {
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+      setLoading(true);
+      // Simulate data loading
+      setTimeout(() => {
+        setLoading(false);
+      }, 2000);
+    }, []);
+
+    return (
+      <div>
+        {loading ? <p>Loading...</p> : <WrappedComponent {...props} />}
+      </div>
+    );
+  };
+}
+// Component to be enhanced
+function MyComponent(props) {
+  return <p>Data: {props.data}</p>;
+}
+
+// Enhance the component
+const EnhancedComponent = withLoading(MyComponent);
+
+// Usage
+function App() {
+  return <EnhancedComponent data="Hello, HOC!" />;
+}
+```
+**Note** React Hooks are the primary alternative to Higher-Order Components (HOCs).
+```
+// Custom Hook example
+function useCounter() {
+  const [count, setCount] = React.useState(0);
+  const increment = () => setCount(count + 1);
+  return { count, increment };
+}
+
+// Functional component using the custom hook
+function MyComponent() {
+  const { count, increment } = useCounter();
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={increment}>Increment</button>
+    </div>
+  );
+}
+```
+
 #### Hooks
 Hooks are functions that let you "hook into" React state and lifecycle features from functional components
 
-[Click here to learn More about Hooks](concepts/src/pages/hooks/README.md)
+[Click here to learn more about Hooks](concepts/src/pages/hooks/README.md)
 
 ## [:top:](#table-of-concepts)
 
 #### React Portal
 `createPortal` is a function that allows to render React children into a different part of the DOM tree, outside of the parent component's hierarchy
 
-[Click here to learn More about Check here to more about Portal](concepts/src/pages/portals/)
+[Click here to learn more about Check here to more about Portal](concepts/src/pages/portals/)
 
 ## [:top:](#table-of-concepts)
 
 #### Lifting State Up 
 When two are more components shares same state, then we can lift state up to a adjacent parent component. This is process is called lifting state up.
 
-[Click here to learn More about Lifting State Up](concepts/src/pages/liftingState/)
+[Click here to learn more about Lifting State Up](concepts/src/pages/liftingState/)
 
 ## [:top:](#table-of-concepts)
 
-#### Lazy Loading 
+#### Lazy Loading / Code Splitting
 Lazy Suspense is a technique for improving application performance by deferring the loading of components until they are needed.
 
-[Click here to learn More about Lazy Loading](concepts/src/pages/lazySuspense/)
+Code splitting in React is a technique used to divide a large application's code into smaller, more manageable chunks. These chunks can then be loaded on demand
+
+[Click here to learn more about Lazy Loading](concepts/src/pages/lazySuspense/)
 
 ## [:top:](#table-of-concepts)
 
@@ -376,14 +457,14 @@ _Basic components provided by React Router include:_
 - `<Link>`: It enables navigation to different routes by updating the URL.
 `useNavigate`: A hook that provides a function to programmatically navigate to different routes.
 
-[Click here to learn More about React Router](concepts/src/routes.jsx)
+[Click here to learn more about React Router](concepts/src/routes.jsx)
 
 ## [:top:](#table-of-concepts)
 
 #### React Redux
 React Redux is a tool that helps manage and share data (state) across different parts of a React application. It acts like a central storage, making it easier to handle complex data flows, especially in larger apps.
 
-[Click here to learn More about Redux](concepts/src/pages/redux)
+[Click here to learn more about Redux](concepts/src/pages/redux)
 
 ## [:top:](#table-of-concepts)
 
