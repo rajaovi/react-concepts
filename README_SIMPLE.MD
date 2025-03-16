@@ -12,8 +12,8 @@
 - [Pure Components](#pure-components)
 - [State](#state-in-react)
 - [Props](#props-in-react)
-- [Stateless Components](#stateless-components)
-- [Stateful Components](#stateful-components)
+- [Stateless Components](#stateless-component)
+- [Statefull Components](#statefull-component)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
