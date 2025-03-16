@@ -10,7 +10,7 @@
 - [Components](#components-in-react)
 - [Events](#events-in-react)
 - [Synthetic Events](#synthetic-events)
-- [Component lifecycle](#lifecycle-methode)
+- [Component lifecycle](#lifecycle-method)
 - [Pure Components](#pure-components)
 - [State](#state-in-react)
 - [Props](#props-in-react)
@@ -18,6 +18,8 @@
 - [Statefull Components](#statefull-component)
 - [PropTypes](#proptypes)
 - [React Inline Style](#react-inline-style)
+- [Fragments](#fragments)
+- [Hooks](#hooks)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -313,5 +315,24 @@ function MyComponent() {
 ```
 ## [:top:](#table-of-concepts)
 
+#### Fragments
+Fragments are a way to group a list of children without adding extra nodes to the DOM. They are useful when you need to return multiple elements from a component but don't want to add a wrapper element.
+_There are two ways to use Fragments:_
+- Shorthand syntax: `<></>`
+- Explicit syntax: `<React.Fragment></React.Fragment>`
+```
+function MyComponent() {
+  return (
+    <>
+      <h1>Hello</h1>
+      <p>This is a paragraph.</p>
+    </>
+  );
+}
+```
+## [:top:](#table-of-concepts)
 
+#### Hooks
+Hooks are functions that let you "hook into" React state and lifecycle features from functional components
 
+[Click Here to Learn More About Hooks](concepts/src/pages/hooks/README.md)
