@@ -44,7 +44,7 @@ _Class component_
 </div>
 ```
 
-## :top:[](#react-concepts-in-simple)
+## [:top:](#react-concepts-in-simple)
 
 #### Pure Components:
 _Class component_ - Pure component  that implements the `shouldComponentUpdate` lifecycle method with a shallow comparison of props and state.
@@ -65,7 +65,7 @@ const MyComponent = (props) => {
 // Wrap the component with React.memo
 export default React.memo(MyComponent);
 ```
-## :top:[](#react-concepts-in-simple)
+## [:top:](#react-concepts-in-simple)
 
 #### Synthetic events in React:
 React's synthetic events are cross-browser wrappers around the browser's native events. They normalize events, ensuring they have consistent properties across different browsers.
