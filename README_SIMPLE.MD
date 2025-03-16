@@ -10,6 +10,10 @@
 - [Synthetic Events](#synthetic-events)
 - [Component lifecycle](#lifecycle-methode)
 - [Pure Components](#pure-components)
+- [State](#state-in-react)
+- [Props](#props-in-react)
+- [Stateless Components](#stateless-components)
+- [Stateful Components](#stateful-components)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -103,7 +107,7 @@ It's divided into three main phases
 ## [:top:](#react-concepts-in-simple)
 
 #### Pure Components:
-If the previous value of the state or props and the new value of the state or props are the same, the component will not re-render.
+If the previous value of state or props and the new value of the state or props are the same, the component will not re-render.
 
 _Functional Component_ 
 - `React.memo` provides similar functionality.
@@ -125,8 +129,6 @@ class MyComponent extends React.PureComponent {
     }
 }
 ```
-
-
 ## [:top:](#react-concepts-in-simple)
 
 #### State in React:
@@ -149,6 +151,7 @@ class Example extends React.Component {
 
 #### Props in React:
 Props is a mechanism for passing data from parent to child component. Props are immutable(read-only). 
+
 _Functional component_ 
 ```
 // Parent component
@@ -169,11 +172,36 @@ _Class component_
 
 //Child Component
 <div>
-<p>{this.props.name}</p>
-<p>{this.props.age}</p>
+  <p>{this.props.name}</p>
+  <p>{this.props.age}</p>
 </div>
 ```
-
 ## [:top:](#react-concepts-in-simple)
+
+#### Stateless Component
+Stateless components, also known as functional components, are simpler and primarily focused on presenting data. They receive data through props and render UI elements based on that data, without managing any internal state.
+```
+export const Greeting = ({ name }) => {
+  return <h1>Hello, {name}!</h1>;
+};
+
+```
+## [:top:](#react-concepts-in-simple)
+
+#### Statefull Component
+Stateful components, also known as class components (although they can also be functional components using hooks), manage their own internal data, which can change over time
+
+```
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
 
 
