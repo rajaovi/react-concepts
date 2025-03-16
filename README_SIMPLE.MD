@@ -14,6 +14,7 @@
 - [Props](#props-in-react)
 - [Stateless Components](#stateless-component)
 - [Statefull Components](#statefull-component)
+- [PropTypes]
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -69,6 +70,8 @@ class MyComponent extends React.Component {
 
 #### Events in React
 In React, events are actions or occurrences, often triggered by user interactions such as `onClick`, `onChange`, `onSubmit`, `onKeyDown`, `onFocus`,
+
+## [:top:](#react-concepts-in-simple)
 
 #### Synthetic Events:
 React's synthetic events are cross-browser wrappers around the browser's native events. They normalize events, ensuring they have consistent properties across different browsers.
@@ -203,5 +206,42 @@ function Counter() {
   );
 }
 ```
+## [:top:](#react-concepts-in-simple)
 
+#### PropTypes
+Proptype used for type checking the props passed to a component. It helps ensure that components receive data of the correct type.
+
+_list of commonly used PropTypes:_
+- `array`: An array
+- `bool`: A boolean value
+- `func`: A function
+- `number`: A number
+- `object`: An object
+- `string`: A string
+- `symbol`: A symbol
+- `node`: The DOM node or a React element
+- `element`: A React element
+- `instanceOf`: Custom type
+- `oneOf`: One of the provided values
+- `oneOfType`: One of the provided types
+- `shape`: An object with the specified shape
+- `arrayOf`: An array of a specified type
+- `objectOf`: An object with a specified type
+
+```
+function MyComponent({ name, age }) {
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+    </div>
+  );
+}
+
+MyComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+};
+```
+## [:top:](#react-concepts-in-simple)
 
