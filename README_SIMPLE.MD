@@ -20,6 +20,12 @@
 - [React Inline Style](#react-inline-style)
 - [Fragments](#fragments)
 - [Hooks](#hooks)
+- [React Portal](concepts/src/pages/portals/)
+- [Lifting State Up](concepts/src/pages/liftingState/)
+- [Lazy Loading](concepts/src/pages/lazySuspense/)
+
+- [React Router](concepts/src/pages/reactRouter)
+- [Redux](concepts/src/pages/redux)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -335,4 +341,48 @@ function MyComponent() {
 #### Hooks
 Hooks are functions that let you "hook into" React state and lifecycle features from functional components
 
-[Click Here to Learn More About Hooks](concepts/src/pages/hooks/README.md)
+[Click ere to earn More about Hooks](concepts/src/pages/hooks/README.md)
+
+## [:top:](#table-of-concepts)
+
+#### React Portal
+`createPortal` is a function that allows to render React children into a different part of the DOM tree, outside of the parent component's hierarchy
+
+[Click ere to earn More about Check here to more about Portal](concepts/src/pages/portals/)
+
+## [:top:](#table-of-concepts)
+
+#### Lifting State Up 
+When two are more components shares same state, then we can lift state up to a adjacent parent component. This is process is called lifting state up.
+
+[Click ere to earn More about Lifting State Up](concepts/src/pages/liftingState/)
+
+## [:top:](#table-of-concepts)
+
+#### Lazy Loading 
+Lazy Suspense is a technique for improving application performance by deferring the loading of components until they are needed.
+
+[Click ere to earn More about Lazy Loading](concepts/src/pages/lazySuspense/)
+
+## [:top:](#table-of-concepts)
+
+#### React Router
+React Router is a library that enables navigation between different views or components in a React application. It allows  to create single-page applications with multiple routes.
+
+_Basic components provided by React Router include:_
+- `<BrowserRouter>`: It utilizes the HTML5 history API for navigation.
+- <Routes>: It acts as a container for <Route> components, rendering the first child that matches the current URL.
+- `<Route>`: It defines a specific path and the component to render when the path matches the URL.
+- `<Link>`: It enables navigation to different routes by updating the URL.
+`useNavigate`: A hook that provides a function to programmatically navigate to different routes.
+
+[Click ere to earn More about React Router](concepts/src/routes.jsx)
+
+## [:top:](#table-of-concepts)
+
+#### React Redux
+React Redux is a tool that helps manage and share data (state) across different parts of a React application. It acts like a central storage, making it easier to handle complex data flows, especially in larger apps.
+
+[Click ere to earn More about Redux](concepts/src/pages/redux)
+
+## [:top:](#table-of-concepts)

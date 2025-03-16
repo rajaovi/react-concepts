@@ -6,15 +6,6 @@ This project Learning purpose for React Concepts
 ## This repo was reference to React major concepts with example:
 This will give you some quick idea & examples of React concepts.
 
-### Topic with Examples
-- [React Hooks](concepts/src/pages/hooks/)
-- [Redux](concepts/src/pages/redux)
-- [React Portal](concepts/src/pages/portals/)
-- [Lifting State Up](concepts/src/pages/liftingState/)
-- [Lazy Loading](concepts/src/pages/lazySuspense/)
-- [React Context API](concepts/src/pages/reactContextAPI)
-- [React Router](concepts/src/pages/reactRouter)
-
 ### Topics
 - [Reconciliation:](#Reconciliation)
 - [React Fiber](#react-fiber)
