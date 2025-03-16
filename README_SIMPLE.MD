@@ -44,7 +44,7 @@ _Class component_
 </div>
 ```
 
-## `[:top:](#react-concepts-in-simple)`
+## [:top:](#react-concepts-in-simple)
 
 #### Pure Components:
 _Class component_ - Pure component  that implements the `shouldComponentUpdate` lifecycle method with a shallow comparison of props and state.
