@@ -8,8 +8,8 @@
 - [Components](#components-in-react)
 - [Events](#events-in-react)
 - [Synthetic Events](#synthetic-events)
-- [Component lifecycle]
-
+- [Component lifecycle](#lifecycle-methode)
+- [Pure Components](#pure-components)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -46,6 +46,7 @@ A React element is a plain JavaScript object that describes a DOM node or a comp
 
 #### Components in React
 A component in React is a reusable and self-contained building block
+
 _Functional component_
 ```
 function MyComponent(props) {
@@ -81,7 +82,7 @@ function MyComponent() {
 ```
 ## [:top:](#react-concepts-in-simple)
 
-#### Lifecycle
+#### Lifecycle Method
 The component lifecycle in React refers to the series of events that occur from the creation of a component to its removal from the DOM. 
 
 It's divided into three main phases 
@@ -99,12 +100,39 @@ It's divided into three main phases
   - This phase occurs when the component is removed from the DOM. Method invoked during this phase: 
   - `componentWillUnmount()`: Invoked just before the component is unmounted, used for cleanup tasks such as clearing timers or canceling network requests.
 
+## [:top:](#react-concepts-in-simple)
+
+#### Pure Components:
+If the previous value of the state or props and the new value of the state or props are the same, the component will not re-render.
+
+_Functional Component_ 
+- `React.memo` provides similar functionality.
+```
+const MyComponent = (props) => {
+  /* render using props */
+  return <div>{props.value}</div>;
+}
+
+// Wrap the component with React.memo
+export default React.memo(MyComponent);
+```
+_Class component_ 
+- Pure component  that implements the `shouldComponentUpdate` lifecycle method with a shallow comparison of props and state.
+```
+class MyComponent extends React.PureComponent {
+    render() {
+        return <div>{this.props.message}</div>;
+    }
+}
+```
+
 
 ## [:top:](#react-concepts-in-simple)
 
 #### State in React:
 State of a component is an object that holds some information that may change over when component re-renders.
 _Functional Component_ `const [message, setMessage] = useState(initalState);`
+
 _Class component_
 ```
 class Example extends React.Component {
@@ -146,27 +174,6 @@ _Class component_
 </div>
 ```
 
-## [:top:](#react-concepts-in-simple)
-
-#### Pure Components:
-_Class component_ - Pure component  that implements the `shouldComponentUpdate` lifecycle method with a shallow comparison of props and state.
-```
-class MyComponent extends React.PureComponent {
-    render() {
-        return <div>{this.props.message}</div>;
-    }
-}
-```
-_Functional Component_ - `React.memo` provides similar functionality.
-```
-const MyComponent = (props) => {
-  /* render using props */
-  return <div>{props.value}</div>;
-}
-
-// Wrap the component with React.memo
-export default React.memo(MyComponent);
-```
 ## [:top:](#react-concepts-in-simple)
 
 
