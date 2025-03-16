@@ -16,6 +16,7 @@
 - [Stateless Components](#stateless-component)
 - [Statefull Components](#statefull-component)
 - [PropTypes](#proptypes)
+- [React Inline Style]()
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -285,6 +286,28 @@ class User extends React.Component {
       </>
     );
   }
+}
+```
+## [:top:](#react-concepts-in-simple)
+
+#### React inline Style
+Inline styles provide a way to style React elements directly within the JSX code using the style attribute.
+```
+const myStyle = {
+  color: 'blue',
+  fontSize: '16px',
+  backgroundColor: 'lightgray'
+};
+
+function MyComponent() {
+  return (
+    <div style={myStyle}>
+      This text is styled inline.
+    </div>
+    <div style={{ color: 'green', padding: 20 }}> 
+      Example of Inline Style
+    </div>
+  );
 }
 ```
 ## [:top:](#react-concepts-in-simple)
