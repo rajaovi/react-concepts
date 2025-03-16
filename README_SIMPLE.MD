@@ -4,6 +4,7 @@
 - [JSX](#jsx)
 - [Virtual DOM](#virtual-dom)
 - [ReactDOM](#react-dom)
+- [React DOM Server](#react-dom-server)
 - [Elements](#elements-in-react)
 - [Components](#components-in-react)
 - [Events](#events-in-react)
@@ -14,7 +15,7 @@
 - [Props](#props-in-react)
 - [Stateless Components](#stateless-component)
 - [Statefull Components](#statefull-component)
-- [PropTypes]
+- [PropTypes](#proptypes)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -41,6 +42,30 @@ The virtual DOM (VDOM) is a programming concept where a virtual representation o
 
 #### React DOM
 ReactDOM serves as a bridge between React components and the browser's DOM. Provides specific methods to manipulate the DOM, such as render(), createRoot(), and hydrateRoot().
+
+## [:top:](#react-concepts-in-simple)
+
+#### React DOM Server
+It's a part of the React library that provides methods to render React components to static markup, typically used in server-side rendering (SSR).
+
+`ReactDOMServer` is primarily used in Node.js environments and offers two main methods
+- `renderToString()`: Renders a React component to a string.
+- `renderToStaticMarkup()`: Renders a React component to a string, without any additional attributes
+```
+import ReactDOMServer from 'react-dom/server';
+
+function MyComponent() {
+  return <div>Hello, Server-Side Rendering!</div>;
+}
+
+const htmlString = ReactDOMServer.renderToString(<MyComponent />);
+console.log(htmlString);
+// Output: <div data-reactroot="">Hello, Server-Side Rendering!</div>
+
+const staticMarkupString = ReactDOMServer.renderToStaticMarkup(<MyComponent />);
+console.log(staticMarkupString);
+// Output: <div>Hello, Server-Side Rendering!</div>
+```
 
 ## [:top:](#react-concepts-in-simple)
 
@@ -228,6 +253,7 @@ _list of commonly used PropTypes:_
 - `arrayOf`: An array of a specified type
 - `objectOf`: An object with a specified type
 
+_Functional component_
 ```
 function MyComponent({ name, age }) {
   return (
@@ -243,5 +269,24 @@ MyComponent.propTypes = {
   age: PropTypes.number,
 };
 ```
+_Class Component_
+```
+class User extends React.Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+  };
+
+  render() {
+    return (
+      <>
+        <h1>{`Welcome, ${this.props.name}`}</h1>
+        <h2>{`Age, ${this.props.age}`}</h2>
+      </>
+    );
+  }
+}
+```
 ## [:top:](#react-concepts-in-simple)
+
 
