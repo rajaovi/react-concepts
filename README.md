@@ -39,6 +39,8 @@
 - [React Query](#react-query)
 - [Error Boundaries](#error-boundaries)
 
+#### Whats new in React 19
+
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
 Example
