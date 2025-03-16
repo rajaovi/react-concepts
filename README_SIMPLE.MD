@@ -1,5 +1,65 @@
 ## REACT CONCEPTS IN SIMPLE
 
+- [React.createElement](#reactcreateelement)
+- [JSX](#jsx)
+- [ReactDOM](#react-dom)
+- [Elements](#elements-in-react)
+- [Components](#components-in-react)
+- [Events]
+
+
+#### React.createElement
+`createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
+Example
+```
+const element = React.createElement('h1', null, 'Hello, world!');
+```
+
+## [:top:](#react-concepts-in-simple)
+
+#### JSX
+JSX, or JavaScript XML, is a syntax extension for JavaScript that allows to write HTML-like code in javascipt file.
+```
+// JSX example
+const element = <h1>Hello, JSX!</h1>;
+
+// Equivalent JavaScript code
+const element = React.createElement('h1', null, 'Hello, JSX!');
+```
+## [:top:](#react-concepts-in-simple)
+
+#### React DOM
+ReactDOM serves as a bridge between React components and the browser's DOM. Provides specific methods to manipulate the DOM, such as render(), createRoot(), and hydrateRoot().
+
+## [:top:](#react-concepts-in-simple)
+
+#### Elements in React
+A React element is a plain JavaScript object that describes a DOM node or a component instance `const element = <h1>Hello, world!</h1>;` is equivalent to the following React.createElement().
+
+## [:top:](#react-concepts-in-simple)
+
+#### Components in React
+A component in React is a reusable and self-contained building block
+_Functional component_
+```
+function MyComponent(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+_Class component_
+```
+class MyComponent extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+## [:top:](#react-concepts-in-simple)
+
+#### Events in React
+In React, events are actions or occurrences, often triggered by user interactions such as `onClick`, `onChange`, `onSubmit`, `onKeyDown`, `onFocus`,
+
+## [:top:](#react-concepts-in-simple)
 
 #### State in React:
 State of a component is an object that holds some information that may change over when component re-renders.
@@ -16,6 +76,7 @@ class Example extends React.Component {
   }
 }
 ```
+## [:top:](#react-concepts-in-simple)
 
 #### Props in React:
 Props is a mechanism for passing data from parent to child component. Props are immutable(read-only). 
@@ -82,3 +143,4 @@ function MyComponent() {
 }
 ```
 ## [:top:](#react-concepts-in-simple)
+
