@@ -20,12 +20,11 @@
 - [React Inline Style](#react-inline-style)
 - [Fragments](#fragments)
 - [Hooks](#hooks)
-- [React Portal](concepts/src/pages/portals/)
-- [Lifting State Up](concepts/src/pages/liftingState/)
-- [Lazy Loading](concepts/src/pages/lazySuspense/)
-
-- [React Router](concepts/src/pages/reactRouter)
-- [Redux](concepts/src/pages/redux)
+- [React Portal](#react-portal)
+- [Lifting State Up](#lifting-state-up)
+- [Lazy Loading](#lazy-loading)
+- [React Router](#react-router)
+- [Redux](#react-redux)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
