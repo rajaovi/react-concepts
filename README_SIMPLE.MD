@@ -9,7 +9,7 @@ class MyComponent extends React.PureComponent {
     }
 }
 ```
-__Functional Component__ - React.memo provides similar functionality.
+_underscores_** - React.memo provides similar functionality.
 ```
 const MyComponent = (props) => {
   /* render using props */
@@ -19,5 +19,4 @@ const MyComponent = (props) => {
 // Wrap the component with React.memo
 export default React.memo(MyComponent);
 ```
-
 
