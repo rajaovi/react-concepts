@@ -29,6 +29,16 @@
 - [React Router](#react-router)
 - [Redux](#react-redux)
 
+##### Concepts yet to update:
+- [React Mixin]
+- [React Internationalization]
+- [React Context](concepts/src/pages/reactContextAPI)
+- [Forms](#forms)
+- [Conditional Rendering](#conditional-rendering)
+- [Lists and Keys](#lists-and-keys)
+- [React Query](#react-query)
+- [Error Boundaries](#error-boundaries)
+
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
 Example
@@ -445,6 +455,17 @@ Code splitting in React is a technique used to divide a large application's code
 
 [Click here to learn more about Lazy Loading](concepts/src/pages/lazySuspense/)
 
+```
+const MyComponent = React.lazy(() => import('./MyComponent'));
+
+function App() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <MyComponent />
+    </Suspense>
+  );
+}
+```
 ## [:top:](#table-of-concepts)
 
 #### React Router
