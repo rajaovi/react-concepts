@@ -36,3 +36,6 @@ export default function LazyTest() {
     </>
 )}
 ```
+
+### Refer Code
+- [index](index.jsx)
