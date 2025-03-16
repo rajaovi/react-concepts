@@ -340,28 +340,28 @@ function MyComponent() {
 #### Hooks
 Hooks are functions that let you "hook into" React state and lifecycle features from functional components
 
-[Click ere to earn More about Hooks](concepts/src/pages/hooks/README.md)
+[Click here to earn More about Hooks](concepts/src/pages/hooks/README.md)
 
 ## [:top:](#table-of-concepts)
 
 #### React Portal
 `createPortal` is a function that allows to render React children into a different part of the DOM tree, outside of the parent component's hierarchy
 
-[Click ere to earn More about Check here to more about Portal](concepts/src/pages/portals/)
+[Click here to earn More about Check here to more about Portal](concepts/src/pages/portals/)
 
 ## [:top:](#table-of-concepts)
 
 #### Lifting State Up 
 When two are more components shares same state, then we can lift state up to a adjacent parent component. This is process is called lifting state up.
 
-[Click ere to earn More about Lifting State Up](concepts/src/pages/liftingState/)
+[Click here to earn More about Lifting State Up](concepts/src/pages/liftingState/)
 
 ## [:top:](#table-of-concepts)
 
 #### Lazy Loading 
 Lazy Suspense is a technique for improving application performance by deferring the loading of components until they are needed.
 
-[Click ere to earn More about Lazy Loading](concepts/src/pages/lazySuspense/)
+[Click here to earn More about Lazy Loading](concepts/src/pages/lazySuspense/)
 
 ## [:top:](#table-of-concepts)
 
@@ -375,13 +375,13 @@ _Basic components provided by React Router include:_
 - `<Link>`: It enables navigation to different routes by updating the URL.
 `useNavigate`: A hook that provides a function to programmatically navigate to different routes.
 
-[Click ere to earn More about React Router](concepts/src/routes.jsx)
+[Click here to earn More about React Router](concepts/src/routes.jsx)
 
 ## [:top:](#table-of-concepts)
 
 #### React Redux
 React Redux is a tool that helps manage and share data (state) across different parts of a React application. It acts like a central storage, making it easier to handle complex data flows, especially in larger apps.
 
-[Click ere to earn More about Redux](concepts/src/pages/redux)
+[Click here to earn More about Redux](concepts/src/pages/redux)
 
 ## [:top:](#table-of-concepts)
