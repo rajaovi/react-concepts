@@ -1,5 +1,6 @@
 ## REACT CONCEPTS IN SIMPLE
 
+### Table of Content
 - [React.createElement](#reactcreateelement)
 - [JSX](#jsx)
 - [Virtual DOM](#virtual-dom)
@@ -16,7 +17,7 @@
 - [Stateless Components](#stateless-component)
 - [Statefull Components](#statefull-component)
 - [PropTypes](#proptypes)
-- [React Inline Style]()
+- [React Inline Style](#react-inline-style)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -311,5 +312,6 @@ function MyComponent() {
 }
 ```
 ## [:top:](#react-concepts-in-simple)
+
 
 
