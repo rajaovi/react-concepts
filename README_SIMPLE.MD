@@ -370,7 +370,7 @@ React Router is a library that enables navigation between different views or com
 
 _Basic components provided by React Router include:_
 - `<BrowserRouter>`: It utilizes the HTML5 history API for navigation.
-- <Routes>: It acts as a container for <Route> components, rendering the first child that matches the current URL.
+- `<Routes>:` It acts as a container for <Route> components, rendering the first child that matches the current URL.
 - `<Route>`: It defines a specific path and the component to render when the path matches the URL.
 - `<Link>`: It enables navigation to different routes by updating the URL.
 `useNavigate`: A hook that provides a function to programmatically navigate to different routes.
