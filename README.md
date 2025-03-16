@@ -1,121 +1,389 @@
-# React Concepts With examples
-This project Learning purpose for React Concepts 
+## REACT CONCEPTS IN SIMPLE
 
-[Check here for simple explantion conctps](README_SIMPLE.MD)
+### Table of Concepts
+- [React.createElement](#reactcreateelement)
+- [JSX](#jsx)
+- [Virtual DOM](#virtual-dom)
+- [ReactDOM](#react-dom)
+- [React DOM Server](#react-dom-server)
+- [Elements](#elements-in-react)
+- [Components](#components-in-react)
+- [Events](#events-in-react)
+- [Synthetic Events](#synthetic-events)
+- [Component lifecycle](#lifecycle-method)
+- [Pure Components](#pure-components)
+- [State](#state-in-react)
+- [Props](#props-in-react)
+- [Stateless Components](#stateless-component)
+- [Statefull Components](#statefull-component)
+- [PropTypes](#proptypes)
+- [React Inline Style](#react-inline-style)
+- [Fragments](#fragments)
+- [Hooks](#hooks)
+- [React Portal](#react-portal)
+- [Lifting State Up](#lifting-state-up)
+- [Lazy Loading](#lazy-loading)
+- [React Router](#react-router)
+- [Redux](#react-redux
+)
 
-## This repo was reference to React major concepts with example:
-This will give you some quick idea & examples of React concepts.
+#### React.createElement
+`createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
+Example
+```̉
+const element = React.createElement('h1', null, 'Hello, world!');
+```
 
-### Topics
-- [Reconciliation:](#Reconciliation)
-- [React Fiber](#react-fiber)
+## [:top:](#table-of-concepts)
 
-### Reconciliation
-When a component re-renders, React creates a new virtual DOM tree and compares it with the previous one. This comparison is done using a diffing algorithm. If there are differences, React calculates the minimal set of changes needed to update the actual DOM. This process is called reconciliation.
+#### JSX
+JSX, or JavaScript XML, is a syntax extension for JavaScript that allows to write HTML-like code in javascipt file.
+```
+// JSX example
+const element = <h1>Hello, JSX!</h1>;
 
-##### Reconciliation involves the following steps:
-- Rendering - When a component's state or props change, React re-renders the component and creates a new virtual DOM tree.
-- Diffing - React compares the new virtual DOM tree with the previous one to identify the differences. This process is called "diffing." 
-- Patching - Based on the differences identified during the diffing process, React updates only the necessary parts of the actual DOM. This process is called "patching."
+// Equivalent JavaScript code
+const element = React.createElement('h1', null, 'Hello, JSX!');
+```
+## [:top:](#table-of-concepts)
 
-#### Fiber Reconciliation
-Priorities:
-- Discrete Event: input, click
-- user blocking: scroll
-- normal prio: data fetch
-- low prio: Root change
-- lowest prio: pre-render
+#### Virtual DOM
+The virtual DOM (VDOM) is a programming concept where a virtual representation of the UI is kept in memory and synced with the real DOM.
 
-### React Fiber
-[Refrence](https://github.com/acdlite/react-fiber-architecture)
-React Fiber significantly enhances the performance and flexibility of React applications, making it easier to build complex UIs while maintaining a smooth user experience.
+#### React DOM
+ReactDOM serves as a bridge between React components and the browser's DOM. Provides specific methods to manipulate the DOM, such as render(), createRoot(), and hydrateRoot().
 
-Fiber is the reconciliation algorithm and rendering engine for React, introduced in React 16. It was a complete rewrite of the original React reconciliation algorithm, which was known as the "stack reconciler." The primary goals of Fiber were to improve the performance and capabilities of React, particularly in handling complex user interfaces and animations.
+## [:top:](#table-of-concepts)
 
-Here are some key features and improvements that Fiber brought to React:
+#### React DOM Server
+It's a part of the React library that provides methods to render React components to static markup, typically used in server-side rendering (SSR).
 
-- **Incremental Rendering:** Fiber allows React to pause and resume work on rendering. This means that React can break rendering work into chunks, which can be spread out over multiple frames. This is particularly useful for keeping the UI responsive during heavy computations or rendering tasks.
+`ReactDOMServer` is primarily used in Node.js environments and offers two main methods
+- `renderToString()`: Renders a React component to a string.
+- `renderToStaticMarkup()`: Renders a React component to a string, without any additional attributes
+```
+import ReactDOMServer from 'react-dom/server';
 
-- **Prioritization of Updates:** Fiber introduces a more sophisticated scheduling mechanism that allows React to prioritize updates based on their importance. This means that more critical updates (like user interactions) can be processed before less critical ones (like background data fetching).
+function MyComponent() {
+  return <div>Hello, Server-Side Rendering!</div>;
+}
 
-- **Concurrency:** With Fiber, React can handle multiple tasks at once, making it more efficient in managing updates and rendering. This is a step towards enabling concurrent rendering, which allows React to work on multiple tasks simultaneously without blocking the main thread.
+const htmlString = ReactDOMServer.renderToString(<MyComponent />);
+console.log(htmlString);
+// Output: <div data-reactroot="">Hello, Server-Side Rendering!</div>
 
-- **Error Boundaries:** Fiber introduced the concept of error boundaries, which allows developers to catch JavaScript errors in their component tree and display a fallback UI instead of crashing the entire application.
+const staticMarkupString = ReactDOMServer.renderToStaticMarkup(<MyComponent />);
+console.log(staticMarkupString);
+// Output: <div>Hello, Server-Side Rendering!</div>
+```
 
-- **Support for Suspense:** Fiber laid the groundwork for features like Suspense, which allows components to "wait" for something (like data fetching) before rendering. This helps in managing asynchronous operations more effectively.
+## [:top:](#table-of-concepts)
 
-- **Improved Component Lifecycles:** Fiber provides a more consistent and predictable lifecycle for components, making it easier for developers to manage component state and side effects.
+#### Elements in React
+A React element is a plain JavaScript object that describes a DOM node or a component instance `const element = <h1>Hello, world!</h1>;` is equivalent to the following React.createElement().
 
-### How it different from virtual dom
-Fiber is a new intermediate strcture that alows us to pause and prioritize the render process to make it asynchronus.
+## [:top:](#table-of-concepts)
 
-Earlier we having React element that would create a virtual dom and that will be translated into an actual DOM with reconiliation.
-But the problem here with this is that it's a very synchronus process
+#### Components in React
+A component in React is a reusable and self-contained building block
 
-in version 16 fiber node was introduced which is an intermediate structure and bascially all the work of rendering component is dome by fiber node.
-once we are done we can then compute the Virtual dom from the fibre tree
+_Functional component_
+```
+function MyComponent(props) {
+  return <h1>Hello, {props.name}</h1>;
+}
+```
+_Class component_
+```
+class MyComponent extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}</h1>;
+  }
+}
+```
+## [:top:](#table-of-concepts)
 
+#### Events in React
+In React, events are actions or occurrences, often triggered by user interactions such as `onClick`, `onChange`, `onSubmit`, `onKeyDown`, `onFocus`,
 
-### Diffing Algo
-- if diff type redo
-- assume keys are stable & unique
-- if same type, diff children
-    - Don't use index as key - if we add or delete index will get change,
+## [:top:](#table-of-concepts)
 
-### Concurent React
+#### Synthetic Events:
+React's synthetic events are cross-browser wrappers around the browser's native events. They normalize events, ensuring they have consistent properties across different browsers.
+```
+function MyComponent() {
+  const handleClick = (event) => {
+    event.persist(); // Retain the event for asynchronous access
+    setTimeout(() => {
+      console.log(event.target); // Access event properties asynchronously
+    }, 1000);
+  };
 
+  return <button onClick={handleClick}>Click me</button>;
+}
+```
+## [:top:](#table-of-concepts)
 
-- [React Context](concepts/src/pages/reactContextAPI)
+#### Lifecycle Method
+The component lifecycle in React refers to the series of events that occur from the creation of a component to its removal from the DOM. 
 
+It's divided into three main phases 
+- **Mounting**
+  - This phase involves the initial rendering of the component to the DOM. Methods invoked during this phase:
+  - `constructor()`: Initializes the component's state and binds event handlers.
+  - `render()`: Required method that returns the JSX to be rendered.
+  - componentDidMount(): Invoked immediately after the component is mounted, suitable for fetching data or interacting with the DOM.
+  - `render()`
+- **Updating**
+  - This phase is triggered by changes to the component's props or state. Methods invoked during this phase:
+  - `render()`: Re-renders the component with updated data.
+  - `componentDidUpdate()`: Invoked after the component is re-rendered, allowing for DOM manipulation or further updates based on the changes.
+- **Unmounting**
+  - This phase occurs when the component is removed from the DOM. Method invoked during this phase: 
+  - `componentWillUnmount()`: Invoked just before the component is unmounted, used for cleanup tasks such as clearing timers or canceling network requests.
 
-- [event handling in react](#event-handling-in-react)
-- [jsx in react](#jsx-in-react)
-- [hooks in react](#hooks-in-react)
-- [react router](#react-router)
-- [react hooks](#react-hooks)
-- [react context](#react-context)
-- [react state](#react-state)
-- [react props](#react-props)
-- [react event handling](#react-event-handling)
-- [react components](#react-components)
-- [react stateless components](#react-stateless-components)
-- [react stateful components](#react-stateful-components)
-- [react lifecycle methods](#react-lifecycle-methods)
-- [react context api](#react-context-api)
-- [Key in Rect]
+## [:top:](#table-of-concepts)
 
-1. [Components](#components)
-2. [JSX](#jsx)
-3. [State](#state)
-4. [Props](#props)
-5. [Event Handling](#event-handling)
-6. [Conditional Rendering](#conditional-rendering)
-7. [Lists and Keys](#lists-and-keys)
-8. [Forms](#forms)
-9. [State Updater](#state-updater)
-10. [Context](#context)
-11. [Hooks](#hooks)
-12. [Higher-Order Components](#higher-order-components)
-13. [Render Props](#render-props)
-14. [Portals](#portals)
-15. [Error Boundaries](#error-boundaries)
-16. [Lifecycle Methods](#lifecycle-methods)
-17. [React Router](#react-router)
-18. [Redux](#redux)
-19. [React Query](#react-query)
-20. [React Hook Form](#react-hook-form)
-21. [React Select](#react-select)
-22. [React Virtualized](#react-virtualized)
-23. [React Transition Group](#react-transition-group)
-24. [React Query DevTools](#react-query-devtools)
-25. [React DevTools](#react-devtools)
-26. [React Hot Loader](#react-hot-loader)
-27. [React Storybook](#react-storybook)
-28. [React Testing Library](#react-testing-library)
-29. [React Jest](#react-jest)
-30. [React Enzyme](#react-enzyme)
-31. [React Mocha](#react-mocha)
-32. [React Chai](#react-chai)
-33. [React Sinon](#react-sinon)
-34. [React Cypress](#react-cypress)
-35. [React Code Splitting](#react-code-splitting)
+#### Pure Components:
+If the previous value of state or props and the new value of the state or props are the same, the component will not re-render.
+
+_Functional Component_ 
+- `React.memo` provides similar functionality.
+```
+const MyComponent = (props) => {
+  /* render using props */
+  return <div>{props.value}</div>;
+}
+
+// Wrap the component with React.memo
+export default React.memo(MyComponent);
+```
+_Class component_ 
+- Pure component  that implements the `shouldComponentUpdate` lifecycle method with a shallow comparison of props and state.
+```
+class MyComponent extends React.PureComponent {
+    render() {
+        return <div>{this.props.message}</div>;
+    }
+}
+```
+## [:top:](#table-of-concepts)
+
+#### State in React:
+State of a component is an object that holds some information that may change over when component re-renders.
+_Functional Component_ `const [message, setMessage] = useState(initalState);`
+
+_Class component_
+```
+class Example extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      message: "State in React",
+    };
+  }
+}
+```
+## [:top:](#table-of-concepts)
+
+#### Props in React:
+Props is a mechanism for passing data from parent to child component. Props are immutable(read-only). 
+
+_Functional component_ 
+```
+// Parent component
+function ParentComponent() {
+  const message = "Hello from parent!";
+  return <ChildComponent text={message} />;
+}
+
+// Child component
+function ChildComponent(props) {
+  return <p>{props.text}</p>;
+}
+```
+_Class component_ 
+```
+//Parent component
+<ChildComponent name="Tony" age="30" />
+
+//Child Component
+<div>
+  <p>{this.props.name}</p>
+  <p>{this.props.age}</p>
+</div>
+```
+## [:top:](#table-of-concepts)
+
+#### Stateless Component
+Stateless components, also known as functional components, are simpler and primarily focused on presenting data. They receive data through props and render UI elements based on that data, without managing any internal state.
+```
+export const Greeting = ({ name }) => {
+  return <h1>Hello, {name}!</h1>;
+};
+
+```
+## [:top:](#table-of-concepts)
+
+#### Statefull Component
+Stateful components, also known as class components (although they can also be functional components using hooks), manage their own internal data, which can change over time
+
+```
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Count: {count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+## [:top:](#table-of-concepts)
+
+#### PropTypes
+Proptype used for type checking the props passed to a component. It helps ensure that components receive data of the correct type.
+
+_list of commonly used PropTypes:_
+- `array`: An array
+- `bool`: A boolean value
+- `func`: A function
+- `number`: A number
+- `object`: An object
+- `string`: A string
+- `symbol`: A symbol
+- `node`: The DOM node or a React element
+- `element`: A React element
+- `instanceOf`: Custom type
+- `oneOf`: One of the provided values
+- `oneOfType`: One of the provided types
+- `shape`: An object with the specified shape
+- `arrayOf`: An array of a specified type
+- `objectOf`: An object with a specified type
+
+_Functional component_
+```
+function MyComponent({ name, age }) {
+  return (
+    <div>
+      <p>Name: {name}</p>
+      <p>Age: {age}</p>
+    </div>
+  );
+}
+
+MyComponent.propTypes = {
+  name: PropTypes.string.isRequired,
+  age: PropTypes.number,
+};
+```
+_Class Component_
+```
+class User extends React.Component {
+  static propTypes = {
+    name: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+  };
+
+  render() {
+    return (
+      <>
+        <h1>{`Welcome, ${this.props.name}`}</h1>
+        <h2>{`Age, ${this.props.age}`}</h2>
+      </>
+    );
+  }
+}
+```
+## [:top:](#table-of-concepts)
+
+#### React inline Style
+Inline styles provide a way to style React elements directly within the JSX code using the style attribute.
+```
+const myStyle = {
+  color: 'blue',
+  fontSize: '16px',
+  backgroundColor: 'lightgray'
+};
+
+function MyComponent() {
+  return (
+    <div style={myStyle}>
+      This text is styled inline.
+    </div>
+    <div style={{ color: 'green', padding: 20 }}> 
+      Example of Inline Style
+    </div>
+  );
+}
+```
+## [:top:](#table-of-concepts)
+
+#### Fragments
+Fragments are a way to group a list of children without adding extra nodes to the DOM. They are useful when you need to return multiple elements from a component but don't want to add a wrapper element.
+_There are two ways to use Fragments:_
+- Shorthand syntax: `<></>`
+- Explicit syntax: `<React.Fragment></React.Fragment>`
+```
+function MyComponent() {
+  return (
+    <>
+      <h1>Hello</h1>
+      <p>This is a paragraph.</p>
+    </>
+  );
+}
+```
+## [:top:](#table-of-concepts)
+
+#### Hooks
+Hooks are functions that let you "hook into" React state and lifecycle features from functional components
+
+[Click here to learn More about Hooks](concepts/src/pages/hooks/README.md)
+
+## [:top:](#table-of-concepts)
+
+#### React Portal
+`createPortal` is a function that allows to render React children into a different part of the DOM tree, outside of the parent component's hierarchy
+
+[Click here to learn More about Check here to more about Portal](concepts/src/pages/portals/)
+
+## [:top:](#table-of-concepts)
+
+#### Lifting State Up 
+When two are more components shares same state, then we can lift state up to a adjacent parent component. This is process is called lifting state up.
+
+[Click here to learn More about Lifting State Up](concepts/src/pages/liftingState/)
+
+## [:top:](#table-of-concepts)
+
+#### Lazy Loading 
+Lazy Suspense is a technique for improving application performance by deferring the loading of components until they are needed.
+
+[Click here to learn More about Lazy Loading](concepts/src/pages/lazySuspense/)
+
+## [:top:](#table-of-concepts)
+
+#### React Router
+React Router is a library that enables navigation between different views or components in a React application. It allows  to create single-page applications with multiple routes.
+
+_Basic components provided by React Router include:_
+- `<BrowserRouter>`: It utilizes the HTML5 history API for navigation.
+- `<Routes>:` It acts as a container for <Route> components, rendering the first child that matches the current URL.
+- `<Route>`: It defines a specific path and the component to render when the path matches the URL.
+- `<Link>`: It enables navigation to different routes by updating the URL.
+`useNavigate`: A hook that provides a function to programmatically navigate to different routes.
+
+[Click here to learn More about React Router](concepts/src/routes.jsx)
+
+## [:top:](#table-of-concepts)
+
+#### React Redux
+React Redux is a tool that helps manage and share data (state) across different parts of a React application. It acts like a central storage, making it easier to handle complex data flows, especially in larger apps.
+
+[Click here to learn More about Redux](concepts/src/pages/redux)
+
+## [:top:](#table-of-concepts)
+
