@@ -19,7 +19,7 @@ const MyComponent = (props) => {
 // Wrap the component with React.memo
 export default React.memo(MyComponent);
 ```
-[Back to Top](#react-concepts-in-simple)
+(cconcepts/public/vite.svgon)[Back to Top](#react-concepts-in-simple)
 
 #### State in React:
 State of a component is an object that holds some information that may change over when component re-renders.
