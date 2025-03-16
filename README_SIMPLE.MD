@@ -1,6 +1,6 @@
 ## REACT CONCEPTS IN SIMPLE
 
-### Table of Content
+### Table of Concepts
 - [React.createElement](#reactcreateelement)
 - [JSX](#jsx)
 - [Virtual DOM](#virtual-dom)
@@ -22,11 +22,11 @@
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
 Example
-```
+```̉
 const element = React.createElement('h1', null, 'Hello, world!');
 ```
 
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### JSX
 JSX, or JavaScript XML, is a syntax extension for JavaScript that allows to write HTML-like code in javascipt file.
@@ -37,7 +37,7 @@ const element = <h1>Hello, JSX!</h1>;
 // Equivalent JavaScript code
 const element = React.createElement('h1', null, 'Hello, JSX!');
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Virtual DOM
 The virtual DOM (VDOM) is a programming concept where a virtual representation of the UI is kept in memory and synced with the real DOM.
@@ -45,7 +45,7 @@ The virtual DOM (VDOM) is a programming concept where a virtual representation o
 #### React DOM
 ReactDOM serves as a bridge between React components and the browser's DOM. Provides specific methods to manipulate the DOM, such as render(), createRoot(), and hydrateRoot().
 
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### React DOM Server
 It's a part of the React library that provides methods to render React components to static markup, typically used in server-side rendering (SSR).
@@ -69,12 +69,12 @@ console.log(staticMarkupString);
 // Output: <div>Hello, Server-Side Rendering!</div>
 ```
 
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Elements in React
 A React element is a plain JavaScript object that describes a DOM node or a component instance `const element = <h1>Hello, world!</h1>;` is equivalent to the following React.createElement().
 
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Components in React
 A component in React is a reusable and self-contained building block
@@ -93,12 +93,12 @@ class MyComponent extends React.Component {
   }
 }
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Events in React
 In React, events are actions or occurrences, often triggered by user interactions such as `onClick`, `onChange`, `onSubmit`, `onKeyDown`, `onFocus`,
 
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Synthetic Events:
 React's synthetic events are cross-browser wrappers around the browser's native events. They normalize events, ensuring they have consistent properties across different browsers.
@@ -114,7 +114,7 @@ function MyComponent() {
   return <button onClick={handleClick}>Click me</button>;
 }
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Lifecycle Method
 The component lifecycle in React refers to the series of events that occur from the creation of a component to its removal from the DOM. 
@@ -134,7 +134,7 @@ It's divided into three main phases
   - This phase occurs when the component is removed from the DOM. Method invoked during this phase: 
   - `componentWillUnmount()`: Invoked just before the component is unmounted, used for cleanup tasks such as clearing timers or canceling network requests.
 
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Pure Components:
 If the previous value of state or props and the new value of the state or props are the same, the component will not re-render.
@@ -159,7 +159,7 @@ class MyComponent extends React.PureComponent {
     }
 }
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### State in React:
 State of a component is an object that holds some information that may change over when component re-renders.
@@ -177,7 +177,7 @@ class Example extends React.Component {
   }
 }
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Props in React:
 Props is a mechanism for passing data from parent to child component. Props are immutable(read-only). 
@@ -206,7 +206,7 @@ _Class component_
   <p>{this.props.age}</p>
 </div>
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Stateless Component
 Stateless components, also known as functional components, are simpler and primarily focused on presenting data. They receive data through props and render UI elements based on that data, without managing any internal state.
@@ -216,7 +216,7 @@ export const Greeting = ({ name }) => {
 };
 
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### Statefull Component
 Stateful components, also known as class components (although they can also be functional components using hooks), manage their own internal data, which can change over time
@@ -233,7 +233,7 @@ function Counter() {
   );
 }
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### PropTypes
 Proptype used for type checking the props passed to a component. It helps ensure that components receive data of the correct type.
@@ -289,7 +289,7 @@ class User extends React.Component {
   }
 }
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 #### React inline Style
 Inline styles provide a way to style React elements directly within the JSX code using the style attribute.
@@ -311,7 +311,7 @@ function MyComponent() {
   );
 }
 ```
-## [:top:](#react-concepts-in-simple)
+## [:top:](#table-of-concepts)
 
 
 
