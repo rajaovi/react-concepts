@@ -1,4 +1,4 @@
-## LEARN REACT CONCEPTS WITH EXAMPLE - V19
+## LEARN REACT CONCEPTS WITH LIVE EXAMPLE - V19
 
 ### Table of Concepts
 - [React.createElement](#reactcreateelement)
