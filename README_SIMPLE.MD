@@ -2,10 +2,13 @@
 
 - [React.createElement](#reactcreateelement)
 - [JSX](#jsx)
+- [Virtual DOM](#virtual-dom)
 - [ReactDOM](#react-dom)
 - [Elements](#elements-in-react)
 - [Components](#components-in-react)
-- [Events]
+- [Events](#events-in-react)
+- [Synthetic Events](#synthetic-events)
+- [Component lifecycle]
 
 
 #### React.createElement
@@ -27,6 +30,9 @@ const element = <h1>Hello, JSX!</h1>;
 const element = React.createElement('h1', null, 'Hello, JSX!');
 ```
 ## [:top:](#react-concepts-in-simple)
+
+#### Virtual DOM
+The virtual DOM (VDOM) is a programming concept where a virtual representation of the UI is kept in memory and synced with the real DOM.
 
 #### React DOM
 ReactDOM serves as a bridge between React components and the browser's DOM. Provides specific methods to manipulate the DOM, such as render(), createRoot(), and hydrateRoot().
@@ -58,6 +64,41 @@ class MyComponent extends React.Component {
 
 #### Events in React
 In React, events are actions or occurrences, often triggered by user interactions such as `onClick`, `onChange`, `onSubmit`, `onKeyDown`, `onFocus`,
+
+#### Synthetic Events:
+React's synthetic events are cross-browser wrappers around the browser's native events. They normalize events, ensuring they have consistent properties across different browsers.
+```
+function MyComponent() {
+  const handleClick = (event) => {
+    event.persist(); // Retain the event for asynchronous access
+    setTimeout(() => {
+      console.log(event.target); // Access event properties asynchronously
+    }, 1000);
+  };
+
+  return <button onClick={handleClick}>Click me</button>;
+}
+```
+## [:top:](#react-concepts-in-simple)
+
+#### Lifecycle
+The component lifecycle in React refers to the series of events that occur from the creation of a component to its removal from the DOM. 
+
+It's divided into three main phases 
+- **Mounting**
+  - This phase involves the initial rendering of the component to the DOM. Methods invoked during this phase:
+  - `constructor()`: Initializes the component's state and binds event handlers.
+  - `render()`: Required method that returns the JSX to be rendered.
+  - componentDidMount(): Invoked immediately after the component is mounted, suitable for fetching data or interacting with the DOM.
+  - `render()`
+- **Updating**
+  - This phase is triggered by changes to the component's props or state. Methods invoked during this phase:
+  - `render()`: Re-renders the component with updated data.
+  - `componentDidUpdate()`: Invoked after the component is re-rendered, allowing for DOM manipulation or further updates based on the changes.
+- **Unmounting**
+  - This phase occurs when the component is removed from the DOM. Method invoked during this phase: 
+  - `componentWillUnmount()`: Invoked just before the component is unmounted, used for cleanup tasks such as clearing timers or canceling network requests.
+
 
 ## [:top:](#react-concepts-in-simple)
 
@@ -128,19 +169,4 @@ export default React.memo(MyComponent);
 ```
 ## [:top:](#react-concepts-in-simple)
 
-#### Synthetic events in React:
-React's synthetic events are cross-browser wrappers around the browser's native events. They normalize events, ensuring they have consistent properties across different browsers.
-```
-function MyComponent() {
-  const handleClick = (event) => {
-    event.persist(); // Retain the event for asynchronous access
-    setTimeout(() => {
-      console.log(event.target); // Access event properties asynchronously
-    }, 1000);
-  };
-
-  return <button onClick={handleClick}>Click me</button>;
-}
-```
-## [:top:](#react-concepts-in-simple)
 
