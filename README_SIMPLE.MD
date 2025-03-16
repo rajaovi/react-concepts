@@ -1,6 +1,6 @@
 ## REACT CONCEPTS IN SIMPLE
 
-### Pure Components:
+#### Pure Components:
 **Class component** - Pure component  that implements the `shouldComponentUpdate` lifecycle method with a shallow comparison of props and state.
 ```
 class MyComponent extends React.PureComponent {
