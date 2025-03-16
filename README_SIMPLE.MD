@@ -385,3 +385,4 @@ React Redux is a tool that helps manage and share data (state) across different 
 [Click here to earn More about Redux](concepts/src/pages/redux)
 
 ## [:top:](#table-of-concepts)
+
