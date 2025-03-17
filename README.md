@@ -513,6 +513,12 @@ React Redux is a tool that helps manage and share data (state) across different 
 
 **Enhanced Hooks:**
 - React 19 offers enhanced hook functionality, providing more control over when code executes and updates, leading to smoother performance.
+  - **useOptimistic Hook:**
+    - This hook allows performing optimistic updates while a background operation completes, improving the user experience.
+  - **useFormStatus Hook:**
+    - This hook simplifies accessing form status information in child components without prop drilling or context.
+  - **useActionState Hook:**
+    - Replaces the deprecated useFormState hook, providing a way to manage state updates from actions.
 
 **Automatic Batching:**
 - State updates are automatically batched, reducing the number of re-renders and improving efficiency. 
@@ -523,8 +529,4 @@ React Redux is a tool that helps manage and share data (state) across different 
 **TypeScript Ready:**
 - React 19 continues to improve TypeScript support, making the integration more seamless. 
 
-**useFormStatus Hook:**
-- This hook simplifies accessing form status information in child components without prop drilling or context.
-
-**useActionState Hook:**
-- Replaces the deprecated useFormState hook, providing a way to manage state updates from actions.
+## [:top:](#table-of-concepts)
