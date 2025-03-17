@@ -39,7 +39,7 @@
 - [React Query](#react-query)
 - [Error Boundaries](#error-boundaries)
 
-#### Whats new in React 19
+#### [Whats new in React 19](#whats-new-in-react-19-1)
 
 #### React.createElement
 `createElement` lets you create a React element. It serves as an alternative to writing JSX - `const element = createElement(type, props, ...children)`
@@ -408,7 +408,7 @@ function App() {
   return <EnhancedComponent data="Hello, HOC!" />;
 }
 ```
-**Note** React Hooks are the primary alternative to Higher-Order Components (HOCs).
+**Note** React Hooks are the primary alternative to Higher-Order Components (HOCs). by creating custom hooks that can be used to reuse logic in functional components.
 ```
 // Custom Hook example
 function useCounter() {
@@ -491,3 +491,28 @@ React Redux is a tool that helps manage and share data (state) across different 
 
 ## [:top:](#table-of-concepts)
 
+#### What's new in React-19
+**React Compiler:**
+- This feature converts React code into plain JavaScript, potentially improving startup performance. 
+**Actions:**
+- Actions simplify data mutation, especially for forms, by handling pending states, errors, and updates automatically.
+**Document Metadata:**
+- The <title> component allows defining and adding SEO meta tags within React components, improving SEO and brand consistency.
+**useOptimistic Hook:**
+- This hook allows performing optimistic updates while a background operation completes, improving the user experience.
+**Server Components:**
+- Fully supported in React 19, Server Components enable rendering parts of an application on the server, reducing client-side rendering work and improving load times. 
+**Web Components:**
+- React 19 introduces improved compatibility with Web Components, allowing seamless integration of custom elements, shadow DOM, and HTML templates.
+**Enhanced Hooks:**
+- React 19 offers enhanced hook functionality, providing more control over when code executes and updates, leading to smoother performance.
+**Automatic Batching:**
+- State updates are automatically batched, reducing the number of re-renders and improving efficiency. 
+**Improved Server-Side Rendering (SSR):**
+- React 19 brings significant improvements to SSR, making it easier to build fast, SEO-friendly applications with faster initial page loads. 
+**TypeScript Ready:**
+- React 19 continues to improve TypeScript support, making the integration more seamless. 
+**useFormStatus Hook:**
+- This hook simplifies accessing form status information in child components without prop drilling or context.
+**useActionState Hook:**
+- Replaces the deprecated useFormState hook, providing a way to manage state updates from actions.
